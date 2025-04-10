@@ -682,7 +682,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 10
-  RotSpeed: 10
+  cameraTransform: {fileID: 0}
   Gravity: 10
 --- !u!143 &1023275858
 CharacterController:

@@ -8,8 +8,7 @@ using UnityEngine.UIElements;
 public class Player : MonoBehaviour
 {
     public float Speed = 10f;
-    public float RotSpeed = 500f;
-    private float Rotation;
+    public Transform cameraTransform;
     public float Gravity = 10f;
 
     Vector3 MoveDirection;
@@ -55,10 +54,15 @@ public class Player : MonoBehaviour
 
         controller.Move(MoveDirection * Time.deltaTime);
     }
-    void Rotate() //nao ta rodando
+    void Rotate() //nao ta rodando //sei la vei
     {
-        float mouseX = Input.GetAxis("Mouse X") * RotSpeed * Time.deltaTime;
+        Vector3 lookDirection = cameraTransform.forward;
+        lookDirection.y = 0f;
 
-        transform.Rotate(0, mouseX * RotSpeed * Time.deltaTime, 0);
+        if (lookDirection.sqrMagnitude > 0.1f)
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(lookDirection);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 10f * Time.deltaTime);
+        };
     }
 }
