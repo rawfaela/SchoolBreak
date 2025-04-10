@@ -55,7 +55,7 @@ public class Player : MonoBehaviour
 
         controller.Move(MoveDirection * Time.deltaTime);
     }
-    void Rotate()
+    void Rotate() //nao ta rodando
     {
         float mouseX = Input.GetAxis("Mouse X") * RotSpeed * Time.deltaTime;
 
