@@ -46,7 +46,7 @@ public class Enemy: MonoBehaviour
                 //transform.Translate(Vector3.back * Velocity * Time.deltaTime);
             }
         }
-        Rotation += Input.GetAxis("Horizontal") * RotSpeed * Time.deltaTime;
+        Rotation += Input.GetAxis("Mouse X") * RotSpeed * Time.deltaTime;
         transform.eulerAngles = new Vector3(0, Rotation, 0);
 
         MoveDirection.y -= Gravity * Time.deltaTime;
