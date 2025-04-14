@@ -1,55 +1,43 @@
 using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine.EventSystems;
-using UnityEngine.SceneManagement;
 
-public class Enemy: MonoBehaviour
+public class Enemy : MonoBehaviour
 {
-    public float Speed;
-    public float RotSpeed;
-    private float Rotation;
-    public float Gravity;
-
-    Vector3 MoveDirection;
     CharacterController controller;
     Animator anim;
 
-    // Start is called before the first frame update
+    public Transform player;
+    public float moveSpeed = 3f;
+    public float stoppingDistance = 2f;
+    public float rotationSpeed = 5f;
+
     void Start()
     {
         controller = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
     }
-
-    // Update is called once per frame
     void Update()
     {
         Move();
     }
-
+  
     void Move()
     {
-        if (controller.isGrounded)
+        if (Vector3.Distance(transform.position, player.position) > stoppingDistance)
         {
+            Vector3 direction = (player.position - transform.position).normalized;
+            Rotate(direction);
+            controller.Move(direction * moveSpeed * Time.deltaTime);
 
-            if (Input.GetKey(KeyCode.UpArrow))
-            {
-                MoveDirection = Vector3.forward * Speed;
-                MoveDirection = transform.TransformDirection(MoveDirection);
-                anim.SetInteger("transition", 1);
-            }
-            if (Input.GetKeyUp(KeyCode.UpArrow))
-            {
-                MoveDirection = Vector3.zero;
-                anim.SetInteger("transition", 0);
-                //transform.Translate(Vector3.back * Velocity * Time.deltaTime);
-            }
+            anim.SetInteger("transition", 1);  
         }
-        Rotation += Input.GetAxis("Mouse X") * RotSpeed * Time.deltaTime;
-        transform.eulerAngles = new Vector3(0, Rotation, 0);
-
-        MoveDirection.y -= Gravity * Time.deltaTime;
-        controller.Move(MoveDirection * Time.deltaTime);
+        else
+        {
+            anim.SetInteger("transition", 0);  
+        }
+    }
+    void Rotate(Vector3 direction)
+    {
+        Quaternion targetRotation = Quaternion.LookRotation(direction);
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
     }
 }
