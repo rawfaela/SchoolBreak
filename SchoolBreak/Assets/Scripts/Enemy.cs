@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
     public float moveSpeed = 3f;
     public float stoppingDistance = 2f;
     public float rotationSpeed = 5f;
+    private bool isAttacking = false;
 
     void Start()
     {
@@ -17,9 +18,22 @@ public class Enemy : MonoBehaviour
     }
     void Update()
     {
-        Move();
+        float distance = Vector3.Distance(transform.position, player.position);
+
+        if (distance > stoppingDistance)
+        {
+            isAttacking = false;
+            Move();
+        }
+        else
+        {
+            if (!isAttacking)
+            {
+                Attack();
+            }
+        }
     }
-  
+
     void Move()
     {
         if (Vector3.Distance(transform.position, player.position) > stoppingDistance)
@@ -28,16 +42,21 @@ public class Enemy : MonoBehaviour
             Rotate(direction);
             controller.Move(direction * moveSpeed * Time.deltaTime);
 
-            anim.SetInteger("transition", 1);  
+            anim.SetInteger("transition", 1);
         }
         else
         {
-            anim.SetInteger("transition", 0);  
+            anim.SetInteger("transition", 0);
         }
     }
     void Rotate(Vector3 direction)
     {
         Quaternion targetRotation = Quaternion.LookRotation(direction);
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+    }
+    void Attack()
+    {
+        isAttacking = true;
+        anim.SetInteger("transition", 2);
     }
 }
