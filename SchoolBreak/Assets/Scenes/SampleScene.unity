@@ -234,15 +234,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 88819d36025c87c48a98d69e39af0c1c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 510.09982
+      value: 497
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 88819d36025c87c48a98d69e39af0c1c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 88819d36025c87c48a98d69e39af0c1c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 361.2
+      value: 368
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 88819d36025c87c48a98d69e39af0c1c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -455,7 +455,7 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
@@ -488,7 +488,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fcf4914cd16ae834ebc20fbfd640cf48, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.06
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fcf4914cd16ae834ebc20fbfd640cf48, type: 3}
       propertyPath: m_LocalPosition.z
