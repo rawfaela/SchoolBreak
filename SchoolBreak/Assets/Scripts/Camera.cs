@@ -24,6 +24,6 @@ public class Camera : MonoBehaviour
         Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
         transform.position = smoothedPosition;
 
-        transform.LookAt(target.position + Vector3.up * 2f); // Leve ajuste para olhar mais ao centro do corpo
+        transform.LookAt(target.position + Vector3.up * 2f); 
     }
 }
