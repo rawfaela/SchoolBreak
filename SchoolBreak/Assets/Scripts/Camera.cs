@@ -10,10 +10,16 @@ public class Camera : MonoBehaviour
 
     private float currentRotation = 0f;
 
+    //perguntas
+    public Player playerScript;
+
     void LateUpdate()
     {
-        float horizontalInput = Input.GetAxis("Mouse X");
-        currentRotation += horizontalInput * rotationSpeed;
+        if (!playerScript.isColliding)
+        {
+            float horizontalInput = Input.GetAxis("Mouse X");
+            currentRotation += horizontalInput * rotationSpeed;
+        }
 
         Quaternion rotation = Quaternion.Euler(-30, currentRotation, 0);
         Vector3 direction = new Vector3(0, 0, -distance);

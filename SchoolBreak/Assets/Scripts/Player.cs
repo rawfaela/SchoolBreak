@@ -15,7 +15,9 @@ public class Player : MonoBehaviour
     CharacterController controller;
     Animator anim;
 
+    //perguntas
     public Canvas question;
+    public bool isColliding = false;
 
     void Start()
     {
@@ -27,8 +29,11 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        Move();
-        Rotate();
+        if (!isColliding)
+        {
+            Move();
+            Rotate();
+        }
     }
 
     void Move()
@@ -76,6 +81,8 @@ public class Player : MonoBehaviour
         {
             Debug.Log("tocou");
             question.gameObject.SetActive(true);
+            isColliding = true;
+            anim.SetInteger("transition", 0);
         }
 
     }

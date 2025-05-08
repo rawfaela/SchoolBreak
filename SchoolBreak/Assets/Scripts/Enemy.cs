@@ -11,6 +11,9 @@ public class Enemy : MonoBehaviour
     public float rotationSpeed = 5f;
     private bool isAttacking = false;
 
+    //perguntas
+    public Player playerScript;
+
     void Start()
     {
         controller = GetComponent<CharacterController>();
@@ -20,16 +23,23 @@ public class Enemy : MonoBehaviour
     {
         float distance = Vector3.Distance(transform.position, player.position);
 
-        if (distance > stoppingDistance)
+        if (playerScript.isColliding)
         {
-            isAttacking = false;
-            Move();
+            anim.SetInteger("transition", 0);
         }
-        else
-        {
-            if (!isAttacking)
+        else  
+        { 
+            if (distance > stoppingDistance)
             {
-                Attack();
+                isAttacking = false;
+                Move();
+            }
+            else
+            {
+                if (!isAttacking)
+                {
+                    Attack();
+                }
             }
         }
     }
