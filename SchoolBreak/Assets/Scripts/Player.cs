@@ -15,10 +15,14 @@ public class Player : MonoBehaviour
     CharacterController controller;
     Animator anim;
 
+    public Canvas question;
+
     void Start()
     {
         controller = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
+
+        question.gameObject.SetActive(false);
     }
 
     void Update()
@@ -54,7 +58,7 @@ public class Player : MonoBehaviour
 
         controller.Move(MoveDirection * Time.deltaTime);
     }
-    void Rotate() //nao ta rodando //sei la vei
+    void Rotate()
     {
         Vector3 lookDirection = cameraTransform.forward;
         lookDirection.y = 0f;
@@ -64,5 +68,15 @@ public class Player : MonoBehaviour
             Quaternion targetRotation = Quaternion.LookRotation(lookDirection);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 10f * Time.deltaTime);
         };
+    }
+
+    private void OnTriggerEnter(Collider obstacle)
+    {
+        if (obstacle.gameObject.CompareTag("Obstacle"))
+        {
+            Debug.Log("tocou");
+            question.gameObject.SetActive(true);
+        }
+
     }
 }
