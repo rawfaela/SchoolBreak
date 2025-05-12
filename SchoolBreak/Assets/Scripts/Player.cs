@@ -199,7 +199,7 @@ public class Player : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
 
-        //reseta a cor dos botão
+        //reseta a cor dos botões
         foreach (var btn in optionButtons)
         {
             btn.image.color = Color.white;
