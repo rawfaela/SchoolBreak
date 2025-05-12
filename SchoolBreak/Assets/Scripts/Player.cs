@@ -183,7 +183,7 @@ public class Player : MonoBehaviour
             Debug.Log("Resposta correta!");
             optionButtons[selectedIndex].image.color = Color.green;
             StartCoroutine(CloseQuestion(1f));
-            //codigo deixar passar
+            //codigo deixar passar -- desativar collider ?
         }
         else
         {
