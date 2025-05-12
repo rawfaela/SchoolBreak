@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 3
   tags:
   - Obstacle
+  - Clock
+  - Boost
   layers:
   - Default
   - TransparentFX

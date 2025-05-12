@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -19,11 +20,16 @@ public class Player : MonoBehaviour
     //perguntas
     public Canvas question;
     public TMP_Text questionText;
-    public TMP_Text[] optionTexts; 
+    public TMP_Text[] optionTexts;
     public Button[] optionButtons;
-    public bool isColliding = false;
-
+    public bool isCollidingObstacle = false;
     private int correctAnswerIndex = -1;
+    private float questionTimer = 0f;
+    private bool questionActive = false;
+    private float extraTimeFromClocks = 0f;
+    public TMP_Text questionTimerText;
+    public TMP_Text ErrorsText;
+    private int contErrors = 0;
 
     void Start()
     {
@@ -40,10 +46,15 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if (!isColliding)
+        if (!isCollidingObstacle)
         {
             Move();
             Rotate();
+        }
+
+        if (contErrors == 3)
+        {
+            //codigo manda pra cena tal ou sla
         }
     }
 
@@ -58,9 +69,9 @@ public class Player : MonoBehaviour
 
             MoveDirection = move * Speed;
 
-            if (vertical != 0 || horizontal != 0)  
+            if (vertical != 0 || horizontal != 0)
             {
-                anim.SetInteger("transition", 1); 
+                anim.SetInteger("transition", 1);
             }
             else
             {
@@ -86,15 +97,21 @@ public class Player : MonoBehaviour
         };
     }
 
-    private void OnTriggerEnter(Collider obstacle)
+    private void OnTriggerEnter(Collider other)
     {
-        if (obstacle.gameObject.CompareTag("Obstacle"))
+        //perguntas
+        if (other.gameObject.CompareTag("Obstacle"))
         {
+            questionTimer = 25f + extraTimeFromClocks;
+            extraTimeFromClocks = 0f; //reseta pq ja foi usado
+            questionActive = true;
+            StartCoroutine(QuestionTime());
+
             question.gameObject.SetActive(true);
-            isColliding = true;
+            isCollidingObstacle = true;
             anim.SetInteger("transition", 0);
 
-            Questions info = obstacle.GetComponent<Questions>();
+            Questions info = other.GetComponent<Questions>();
             if (info != null)
             {
                 var q = info.questionData;
@@ -105,37 +122,92 @@ public class Player : MonoBehaviour
                 {
                     optionTexts[i].text = q.options[i];
 
-                    int index = i; // Captura o índice para o listener
+                    int index = i;
                     optionButtons[i].onClick.RemoveAllListeners();
                     optionButtons[i].onClick.AddListener(() => OnOptionSelected(index));
                 }
             }
+        }
+
+        if (other.gameObject.CompareTag("Boost"))
+        {
+            StartCoroutine(BoostSpeed(2.5f, 5));
+        }
+
+        if (other.gameObject.CompareTag("Clock"))
+        {
+            extraTimeFromClocks += 5f;
         }
     }
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Obstacle"))
         {
-            isColliding = false;
+            isCollidingObstacle = false;
             question.gameObject.SetActive(false);
         }
     }
 
+    //boost velocidade quando player pega tenis 
+    private IEnumerator BoostSpeed(float multiplier, float duration)
+    {
+        Speed *= multiplier;
+        yield return new WaitForSeconds(duration);
+        Speed /= multiplier;
+    }
+
+    //tempo da pergunta com e sem boost
+    private IEnumerator QuestionTime()
+    {
+        while (questionTimer > 0f)
+        {
+            questionTimer -= Time.deltaTime;
+            questionTimerText.text = $"{Mathf.CeilToInt(questionTimer)}s";
+            yield return null;
+        }
+
+        if (questionActive)
+        {
+            question.gameObject.SetActive(false);
+            isCollidingObstacle = false;
+            questionActive = false;
+        }
+        questionTimerText.text = "";
+    }
+
+    //perguntas
     void OnOptionSelected(int selectedIndex)
     {
         if (selectedIndex == correctAnswerIndex)
         {
             Debug.Log("Resposta correta!");
-            // Você pode fazer algo como dar pontos, liberar caminho, etc.
+            optionButtons[selectedIndex].image.color = Color.green;
+            StartCoroutine(CloseQuestion(1f));
+            //codigo deixar passar
         }
         else
         {
             Debug.Log("Resposta incorreta!");
-            // Penalidade, aviso, etc.
+            optionButtons[selectedIndex].image.color = Color.red;
+            StartCoroutine(CloseQuestion(1f));
+            ErrorsText.text = $"{ErrorsText.text}X";
+            contErrors += 1;  //QUANDO CHEGAR A 3 VOLTAR DETENÇÃO
+        }
+    }
+
+    IEnumerator CloseQuestion(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        //reseta a cor dos botão
+        foreach (var btn in optionButtons)
+        {
+            btn.image.color = Color.white;
         }
 
-        // Fecha o canvas após resposta
         question.gameObject.SetActive(false);
-        isColliding = false;
+        isCollidingObstacle = false;
+        questionActive = false;
     }
+    //comentar: ctrl k ctrl c  descomentar: ctrl k ctrl u
 }
