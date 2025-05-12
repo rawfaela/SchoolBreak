@@ -22,13 +22,14 @@ public class Player : MonoBehaviour
     public TMP_Text questionText;
     public TMP_Text[] optionTexts;
     public Button[] optionButtons;
-    public bool isColliding = false;
+    public bool isCollidingObstacle = false;
     private int correctAnswerIndex = -1;
     private float questionTimer = 0f;
     private bool questionActive = false;
     private float extraTimeFromClocks = 0f;
     public TMP_Text questionTimerText;
-
+    public TMP_Text ErrorsText;
+    private int contErrors = 0;
 
     void Start()
     {
@@ -45,10 +46,15 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if (!isColliding)
+        if (!isCollidingObstacle)
         {
             Move();
             Rotate();
+        }
+
+        if (contErrors == 3)
+        {
+            //codigo manda pra cena tal ou sla
         }
     }
 
@@ -102,7 +108,7 @@ public class Player : MonoBehaviour
             StartCoroutine(QuestionTime());
 
             question.gameObject.SetActive(true);
-            isColliding = true;
+            isCollidingObstacle = true;
             anim.SetInteger("transition", 0);
 
             Questions info = other.GetComponent<Questions>();
@@ -137,7 +143,7 @@ public class Player : MonoBehaviour
     {
         if (other.CompareTag("Obstacle"))
         {
-            isColliding = false;
+            isCollidingObstacle = false;
             question.gameObject.SetActive(false);
         }
     }
@@ -163,7 +169,7 @@ public class Player : MonoBehaviour
         if (questionActive)
         {
             question.gameObject.SetActive(false);
-            isColliding = false;
+            isCollidingObstacle = false;
             questionActive = false;
         }
         questionTimerText.text = "";
@@ -177,12 +183,15 @@ public class Player : MonoBehaviour
             Debug.Log("Resposta correta!");
             optionButtons[selectedIndex].image.color = Color.green;
             StartCoroutine(CloseQuestion(1f));
+            //codigo deixar passar
         }
         else
         {
             Debug.Log("Resposta incorreta!");
             optionButtons[selectedIndex].image.color = Color.red;
             StartCoroutine(CloseQuestion(1f));
+            ErrorsText.text = $"{ErrorsText.text}X";
+            contErrors += 1;  //QUANDO CHEGAR A 3 VOLTAR DETENÇÃO
         }
     }
 
@@ -197,7 +206,7 @@ public class Player : MonoBehaviour
         }
 
         question.gameObject.SetActive(false);
-        isColliding = false;
+        isCollidingObstacle = false;
         questionActive = false;
     }
     //comentar: ctrl k ctrl c  descomentar: ctrl k ctrl u

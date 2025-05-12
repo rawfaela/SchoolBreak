@@ -23,7 +23,7 @@ public class Enemy : MonoBehaviour
     {
         float distance = Vector3.Distance(transform.position, player.position);
 
-        if (playerScript.isColliding)
+        if (playerScript.isCollidingObstacle)
         {
             anim.SetInteger("transition", 0);
         }

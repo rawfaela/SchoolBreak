@@ -15,7 +15,7 @@ public class Camera : MonoBehaviour
 
     void LateUpdate()
     {
-        if (!playerScript.isColliding)
+        if (!playerScript.isCollidingObstacle)
         {
             float horizontalInput = Input.GetAxis("Mouse X");
             currentRotation += horizontalInput * rotationSpeed;
