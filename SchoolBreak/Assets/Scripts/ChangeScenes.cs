@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 public class ChangeScenes : MonoBehaviour
 {
     public AudioSource musica;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
     {
         musica.Play();
@@ -12,11 +12,21 @@ public class ChangeScenes : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
-    public void ChangeScene()
+    public void SceneStart()
     {
         musica.Stop();
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Start");
+    }
+    public void SceneGameOver()
+    {
+        musica.Stop();
+        SceneManager.LoadScene("GameOver");
+    }
+    public void SceneWin()
+    {
+        musica.Stop();
+        SceneManager.LoadScene("Win");
     }
 }

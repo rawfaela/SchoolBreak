@@ -29,10 +29,11 @@ public class Player : MonoBehaviour
     private float extraTimeFromClocks = 0f;
     public TMP_Text questionTimerText;
     public TMP_Text ErrorsText;
-    private int contErrors = 0;
+    public int contErrors = 0;
     private Coroutine questionCoroutine; //tempo tava contando super rapido quando pegava o relogio
     private Collider obstacleCollider; //p desativar o collider do obstaculo dps de acertar a pergunta
 
+    ChangeScenes changeScenes
     void Start()
     {
         controller = GetComponent<CharacterController>();
@@ -59,7 +60,7 @@ public class Player : MonoBehaviour
 
         if (contErrors == 3)
         {
-            //codigo manda pra cena tal ou sla
+            changeScenes.SceneGameOver();
         }
     }
 
