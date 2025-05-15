@@ -14,19 +14,17 @@ public class ChangeScenes : MonoBehaviour
     {
 
     }
-    public void SceneStart()
+    public void SceneGame()
     {
         musica.Stop();
-        SceneManager.LoadScene("Start");
+        SceneManager.LoadScene("Game");
     }
     public void SceneGameOver()
     {
-        musica.Stop();
         SceneManager.LoadScene("GameOver");
     }
     public void SceneWin()
     {
-        musica.Stop();
         SceneManager.LoadScene("Win");
     }
 }
