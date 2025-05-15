@@ -61,10 +61,7 @@ public class Player : MonoBehaviour
 
         if (contErrors == 3)
         {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
             changeScenes.SceneGameOver();
-            
         }
     }
 
