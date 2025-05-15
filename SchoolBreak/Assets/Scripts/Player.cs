@@ -29,8 +29,11 @@ public class Player : MonoBehaviour
     private float extraTimeFromClocks = 0f;
     public TMP_Text questionTimerText;
     public TMP_Text ErrorsText;
-    private int contErrors = 0;
+    public int contErrors = 0;
+    private Coroutine questionCoroutine; //tempo tava contando super rapido quando pegava o relogio
+    private Collider obstacleCollider; //p desativar o collider do obstaculo dps de acertar a pergunta
 
+    ChangeScenes changeScenes;
     void Start()
     {
         controller = GetComponent<CharacterController>();
@@ -42,6 +45,9 @@ public class Player : MonoBehaviour
         {
             btn.onClick.RemoveAllListeners();
         }
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     void Update()
@@ -54,7 +60,7 @@ public class Player : MonoBehaviour
 
         if (contErrors == 3)
         {
-            //codigo manda pra cena tal ou sla
+            changeScenes.SceneGameOver();
         }
     }
 
@@ -102,10 +108,24 @@ public class Player : MonoBehaviour
         //perguntas
         if (other.gameObject.CompareTag("Obstacle"))
         {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            
             questionTimer = 25f + extraTimeFromClocks;
             extraTimeFromClocks = 0f; //reseta pq ja foi usado
             questionActive = true;
-            StartCoroutine(QuestionTime());
+
+            if (obstacleCollider != null)
+            {
+                obstacleCollider.enabled = true; //ativa o collider do ultimo obstaculo (se tiver)
+            }
+            obstacleCollider = other; //salva o collider desse
+
+            if (questionCoroutine != null) //tempo tava contando super rapido quando pegava o relogio
+            {
+                StopCoroutine(questionCoroutine);
+            }
+            questionCoroutine = StartCoroutine(QuestionTime());
 
             question.gameObject.SetActive(true);
             isCollidingObstacle = true;
@@ -183,7 +203,7 @@ public class Player : MonoBehaviour
             Debug.Log("Resposta correta!");
             optionButtons[selectedIndex].image.color = Color.green;
             StartCoroutine(CloseQuestion(1f));
-            //codigo deixar passar
+            obstacleCollider.GetComponent<Collider>().enabled = false;
         }
         else
         {
@@ -199,7 +219,7 @@ public class Player : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
 
-        //reseta a cor dos botão
+        //reseta a cor dos botões
         foreach (var btn in optionButtons)
         {
             btn.image.color = Color.white;
@@ -208,6 +228,9 @@ public class Player : MonoBehaviour
         question.gameObject.SetActive(false);
         isCollidingObstacle = false;
         questionActive = false;
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
     //comentar: ctrl k ctrl c  descomentar: ctrl k ctrl u
 }
