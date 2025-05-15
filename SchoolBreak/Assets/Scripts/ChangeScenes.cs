@@ -2,11 +2,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class ChangeScenes : MonoBehaviour
 {
-    public AudioSource musica;
+    public AudioSource music;
 
     void Start()
     {
-        musica.Play();
+        music.Play();
     }
 
     // Update is called once per frame
@@ -16,7 +16,7 @@ public class ChangeScenes : MonoBehaviour
     }
     public void SceneGame()
     {
-        musica.Stop();
+        music.Stop();
         SceneManager.LoadScene("Game");
     }
     public void SceneGameOver()

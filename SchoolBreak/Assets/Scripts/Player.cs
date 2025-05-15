@@ -33,7 +33,8 @@ public class Player : MonoBehaviour
     private Coroutine questionCoroutine; //tempo tava contando super rapido quando pegava o relogio
     private Collider obstacleCollider; //p desativar o collider do obstaculo dps de acertar a pergunta
 
-    ChangeScenes changeScenes;
+    public ChangeScenes changeScenes;
+
     void Start()
     {
         controller = GetComponent<CharacterController>();

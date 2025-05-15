@@ -463,9 +463,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 973204002}
-        m_TargetAssemblyTypeName: MainGame, Assembly-CSharp
-
-        m_MethodName: ChangeScene
+        m_TargetAssemblyTypeName: ChangeScenes, Assembly-CSharp
+        m_MethodName: SceneGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
