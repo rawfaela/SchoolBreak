@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class ChamarJogoPrincipal : MonoBehaviour
+public class ChangeScenes : MonoBehaviour
 {
     public AudioSource musica;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -14,7 +14,7 @@ public class ChamarJogoPrincipal : MonoBehaviour
     {
         
     }
-    public void MudarCena()
+    public void ChangeScene()
     {
         musica.Stop();
         SceneManager.LoadScene(1);
