@@ -417,7 +417,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b19821fa70f4854dad7ef77afb98572, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musica: {fileID: 2132606519}
+  music: {fileID: 2132606519}
 --- !u!114 &973204003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -463,8 +463,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 973204002}
-        m_TargetAssemblyTypeName: ChamarJogoPrincipal, Assembly-CSharp
-        m_MethodName: MudarCena
+        m_TargetAssemblyTypeName: MainGame, Assembly-CSharp
+        m_MethodName: ChangeScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

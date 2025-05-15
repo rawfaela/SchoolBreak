@@ -6,10 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/TelaInicio.unity
+    path: Assets/Scenes/HomeScreen.unity
     guid: 3c8bc878f4bd63e43a47e2ca797686c7
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: ca40ae96648d7e846a78a6e22f3eca5b
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
