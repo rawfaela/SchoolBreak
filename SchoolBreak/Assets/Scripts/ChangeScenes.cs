@@ -22,9 +22,13 @@ public class ChangeScenes : MonoBehaviour
     public void SceneGameOver()
     {
         SceneManager.LoadScene("GameOver");
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
     public void SceneWin()
     {
         SceneManager.LoadScene("Win");
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 }

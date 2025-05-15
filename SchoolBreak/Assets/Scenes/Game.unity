@@ -1762,6 +1762,7 @@ MonoBehaviour:
   stoppingDistance: 2
   rotationSpeed: 10
   playerScript: {fileID: 1023275857}
+  changeScenes: {fileID: 711031049}
 --- !u!143 &620978945
 CharacterController:
   m_ObjectHideFlags: 0
@@ -2172,7 +2173,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 711031048}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b19821fa70f4854dad7ef77afb98572, type: 3}
+  m_Script: {fileID: 11500000, guid: 30aca776a40fd80478b50a3b27b717b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   music: {fileID: 1839454903}
