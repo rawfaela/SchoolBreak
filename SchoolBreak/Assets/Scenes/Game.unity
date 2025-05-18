@@ -1341,6 +1341,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: table
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 2535a716085ad7f449558a38be0fc7b9, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2535a716085ad7f449558a38be0fc7b9, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -1400,6 +1404,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 2535a716085ad7f449558a38be0fc7b9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 470876504}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 2535a716085ad7f449558a38be0fc7b9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 470876505}
   m_SourcePrefab: {fileID: 100100000, guid: 2535a716085ad7f449558a38be0fc7b9, type: 3}
 --- !u!4 &301594519 stripped
 Transform:
@@ -1709,11 +1716,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &395611051 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1415823851124332, guid: 86b2edea838afa24796af037de46f29a, type: 3}
-  m_PrefabInstance: {fileID: 1244752380}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &441211603 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4309411630245040, guid: 507f04481eb98524fbb0f9ba6384815d, type: 3}
@@ -1837,6 +1839,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 88819d36025c87c48a98d69e39af0c1c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 625074377}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 88819d36025c87c48a98d69e39af0c1c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 625074379}
     - targetCorrespondingSourceObject: {fileID: 3817036838631600506, guid: 88819d36025c87c48a98d69e39af0c1c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 547171645}
@@ -1960,6 +1965,27 @@ MonoBehaviour:
     - C
     - D
     correctOptionIndex: 1
+--- !u!65 &470876505
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470876499}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.93778, y: 1.3868084, z: 0.7950906}
+  m_Center: {x: -0.000000029802322, y: 0, z: 0.3975583}
 --- !u!1001 &526726785
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1971,6 +1997,10 @@ PrefabInstance:
     - target: {fileID: 1396718442724188, guid: 49bd04efa032c7d4c8bdc9a4a3e565ce, type: 3}
       propertyPath: m_Name
       value: table (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1396718442724188, guid: 49bd04efa032c7d4c8bdc9a4a3e565ce, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 4241979589122758, guid: 49bd04efa032c7d4c8bdc9a4a3e565ce, type: 3}
       propertyPath: m_LocalScale.x
@@ -2447,6 +2477,27 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!65 &625074379
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 625074374}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 12.536514, y: 0.9305484, z: 14.732742}
+  m_Center: {x: 0.48271942, y: -0.034726024, z: 6.866371}
 --- !u!4 &643727308 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4656755864462074, guid: ddae5b746249dfa4bb293089d90db4ad, type: 3}
@@ -2479,15 +2530,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fcf4914cd16ae834ebc20fbfd640cf48, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 507.82
+      value: 496.21
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fcf4914cd16ae834ebc20fbfd640cf48, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.39
+      value: 4.955
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fcf4914cd16ae834ebc20fbfd640cf48, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 432.62
+      value: 393.19
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fcf4914cd16ae834ebc20fbfd640cf48, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2654,7 +2705,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -2819,6 +2870,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bookcase_2
       objectReference: {fileID: 0}
+    - target: {fileID: 1702917804995862, guid: 5989ab8b158243445aef3657bfd64840, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4101184172260270, guid: 5989ab8b158243445aef3657bfd64840, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -2878,6 +2933,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1702917804995862, guid: 5989ab8b158243445aef3657bfd64840, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1990473754}
+    - targetCorrespondingSourceObject: {fileID: 1702917804995862, guid: 5989ab8b158243445aef3657bfd64840, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1990473755}
   m_SourcePrefab: {fileID: 100100000, guid: 5989ab8b158243445aef3657bfd64840, type: 3}
 --- !u!1 &774151590 stripped
 GameObject:
@@ -3087,6 +3145,27 @@ MonoBehaviour:
     - C
     - D
     correctOptionIndex: 1
+--- !u!65 &954536917
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954536911}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.93778, y: 1.3868088, z: 0.79509073}
+  m_Center: {x: -0.000000029802322, y: 0, z: 0.39755836}
 --- !u!4 &958770479 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4101184172260270, guid: 5989ab8b158243445aef3657bfd64840, type: 3}
@@ -3801,17 +3880,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: stool_4
       objectReference: {fileID: 0}
-    - target: {fileID: 4311482910266148, guid: 86b2edea838afa24796af037de46f29a, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4311482910266148, guid: 86b2edea838afa24796af037de46f29a, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4311482910266148, guid: 86b2edea838afa24796af037de46f29a, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2
+    - target: {fileID: 1415823851124332, guid: 86b2edea838afa24796af037de46f29a, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 4311482910266148, guid: 86b2edea838afa24796af037de46f29a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3853,13 +3924,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8403467751401060383, guid: 86b2edea838afa24796af037de46f29a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1415823851124332, guid: 86b2edea838afa24796af037de46f29a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1985571695}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86b2edea838afa24796af037de46f29a, type: 3}
 --- !u!1 &1268398392
 GameObject:
@@ -3954,6 +4026,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bed
       objectReference: {fileID: 0}
+    - target: {fileID: 1703843792552052, guid: 60985fdc46b91334597bfd17e5341791, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4196016720406884, guid: 60985fdc46b91334597bfd17e5341791, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.5
@@ -4013,6 +4089,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1703843792552052, guid: 60985fdc46b91334597bfd17e5341791, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1809849013}
+    - targetCorrespondingSourceObject: {fileID: 1703843792552052, guid: 60985fdc46b91334597bfd17e5341791, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1809849014}
   m_SourcePrefab: {fileID: 100100000, guid: 60985fdc46b91334597bfd17e5341791, type: 3}
 --- !u!4 &1344299137 stripped
 Transform:
@@ -5176,6 +5255,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bed
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 6a43712dffaf88a489a7e4edcd60ff96, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6a43712dffaf88a489a7e4edcd60ff96, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -5235,6 +5318,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 6a43712dffaf88a489a7e4edcd60ff96, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1710655933}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 6a43712dffaf88a489a7e4edcd60ff96, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1710655934}
   m_SourcePrefab: {fileID: 100100000, guid: 6a43712dffaf88a489a7e4edcd60ff96, type: 3}
 --- !u!4 &1710655928 stripped
 Transform:
@@ -5261,6 +5347,27 @@ MonoBehaviour:
     - C
     - D
     correctOptionIndex: 1
+--- !u!65 &1710655934
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172105318}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.043637, y: 2.3463774, z: 0.752877}
+  m_Center: {x: 0, y: 0, z: 0.37645113}
 --- !u!1001 &1716824922
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5443,6 +5550,27 @@ MonoBehaviour:
     - C
     - D
     correctOptionIndex: 1
+--- !u!65 &1809849014
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1809849008}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.043637, y: 2.346377, z: 0.7528768}
+  m_Center: {x: 0, y: 0, z: 0.37645105}
 --- !u!1 &1815822238 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 3884851ada56177469647f0e206d3939, type: 3}
@@ -5899,26 +6027,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4311482910266148, guid: 86b2edea838afa24796af037de46f29a, type: 3}
   m_PrefabInstance: {fileID: 1244752380}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1985571695
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 395611051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4e3d354705f7e24c9468e365c603518, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questionData:
-    question: AIAI PAPAI
-    options:
-    - A
-    - B
-    - C
-    - D
-    correctOptionIndex: 1
 --- !u!1 &1988543746 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8736644195822422106, guid: 88819d36025c87c48a98d69e39af0c1c, type: 3}
@@ -5970,6 +6078,27 @@ MonoBehaviour:
     - C
     - D
     correctOptionIndex: 1
+--- !u!65 &1990473755
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990473749}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.36147618, y: 1.1797678, z: 1.845943}
+  m_Center: {x: 0.000000044703484, y: 0.00000020861626, z: 0.922984}
 --- !u!4 &1993345812 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4250085244147222, guid: 83a566313b927914d814304bba9f6852, type: 3}
@@ -6163,6 +6292,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: table
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 2535a716085ad7f449558a38be0fc7b9, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2535a716085ad7f449558a38be0fc7b9, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -6222,6 +6355,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 2535a716085ad7f449558a38be0fc7b9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2050752174}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 2535a716085ad7f449558a38be0fc7b9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2050752175}
   m_SourcePrefab: {fileID: 100100000, guid: 2535a716085ad7f449558a38be0fc7b9, type: 3}
 --- !u!4 &2050752169 stripped
 Transform:
@@ -6248,6 +6384,27 @@ MonoBehaviour:
     - C
     - D
     correctOptionIndex: 1
+--- !u!65 &2050752175
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 707800073}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.93778, y: 1.3868084, z: 0.7950906}
+  m_Center: {x: -0.000000029802322, y: 0, z: 0.3975583}
 --- !u!1001 &2056288935
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6259,6 +6416,10 @@ PrefabInstance:
     - target: {fileID: 1396718442724188, guid: 49bd04efa032c7d4c8bdc9a4a3e565ce, type: 3}
       propertyPath: m_Name
       value: table
+      objectReference: {fileID: 0}
+    - target: {fileID: 1396718442724188, guid: 49bd04efa032c7d4c8bdc9a4a3e565ce, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 4241979589122758, guid: 49bd04efa032c7d4c8bdc9a4a3e565ce, type: 3}
       propertyPath: m_LocalScale.x
@@ -6319,6 +6480,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1396718442724188, guid: 49bd04efa032c7d4c8bdc9a4a3e565ce, type: 3}
       insertIndex: -1
       addedObject: {fileID: 954536916}
+    - targetCorrespondingSourceObject: {fileID: 1396718442724188, guid: 49bd04efa032c7d4c8bdc9a4a3e565ce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 954536917}
   m_SourcePrefab: {fileID: 100100000, guid: 49bd04efa032c7d4c8bdc9a4a3e565ce, type: 3}
 --- !u!1 &2090917662
 GameObject:
