@@ -24,13 +24,23 @@ public class Camera : MonoBehaviour
         Quaternion rotation = Quaternion.Euler(-30, currentRotation, 0);
         Vector3 direction = new Vector3(0, 0, -distance);
         Vector3 rotatedDirection = rotation * direction;
-
         Vector3 desiredPosition = target.position + rotatedDirection + Vector3.up * height;
+
+        float currentDistance = direction.magnitude;
+        Ray ray = new Ray(target.position + Vector3.up * 1.5f, direction.normalized);
+        if (Physics.Raycast(ray, out RaycastHit hit, currentDistance))
+        {
+            if (hit.collider.CompareTag("School"))
+            {
+                desiredPosition = hit.point - direction.normalized * 0.2f;
+            }
+        }
+        
 
         Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
         transform.position = smoothedPosition;
 
-        transform.LookAt(target.position + Vector3.up * 2f); 
+        transform.LookAt(target.position + Vector3.up * 2f);
     }
 }
 

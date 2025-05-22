@@ -3,10 +3,12 @@ using UnityEngine.SceneManagement;
 public class ChangeScenes : MonoBehaviour
 {
     public AudioSource music;
+    public Canvas howTo;
 
     void Start()
     {
         music.Play();
+        howTo.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -28,6 +30,24 @@ public class ChangeScenes : MonoBehaviour
     public void SceneWin()
     {
         SceneManager.LoadScene("Win");
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+    public void SceneStart()
+    {
+        SceneManager.LoadScene("Start");
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+    public void HowTo()
+    {
+        howTo.gameObject.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+    public void HowToOut()
+    {
+        howTo.gameObject.SetActive(false);
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
