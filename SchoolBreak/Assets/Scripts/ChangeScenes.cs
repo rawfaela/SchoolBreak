@@ -7,8 +7,11 @@ public class ChangeScenes : MonoBehaviour
 
     void Start()
     {
-        music.Play();
-        howTo.gameObject.SetActive(false);
+        if (SceneManager.GetActiveScene().name == "Start")
+        {
+            music.Play();
+            howTo.gameObject.SetActive(false);
+        }
     }
 
     // Update is called once per frame
