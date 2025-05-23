@@ -61,6 +61,9 @@ public class Camera : MonoBehaviour
 
     void LateUpdate()
     {
+        // Verificações de segurança
+        if (target == null || playerScript == null) return;
+
         // Rotação da câmera
         if (!playerScript.isCollidingObstacle)
         {
@@ -71,23 +74,18 @@ public class Camera : MonoBehaviour
         Quaternion rotation = Quaternion.Euler(-30, currentRotation, 0);
         Vector3 direction = new Vector3(0, 0, -distance);
         Vector3 rotatedDirection = rotation * direction;
-
         Vector3 desiredPosition = target.position + rotatedDirection + Vector3.up * height;
 
-        Vector3 rayOrigin = target.position + Vector3.up * 2f;
+        // Detecção de colisão simples - do jogador para a posição desejada da câmera
+        Vector3 rayOrigin = target.position + Vector3.up * 1.5f;
         Vector3 rayDirection = (desiredPosition - rayOrigin).normalized;
+        float rayDistance = Vector3.Distance(rayOrigin, desiredPosition);
 
-        float adjustedDistance = distance;
         RaycastHit hit;
-
-        float cameraRadius = 0.5f; // raio da câmera para não atravessar cantos ou teto
-        if (Physics.SphereCast(rayOrigin, cameraRadius, rayDirection, out hit, distance))
+        if (Physics.Raycast(rayOrigin, rayDirection, out hit, rayDistance))
         {
-            adjustedDistance = hit.distance - 0.5f;
-            adjustedDistance = Mathf.Clamp(adjustedDistance, 2.0f, distance);
-
-            rotatedDirection = rotation * new Vector3(0, 0, -adjustedDistance);
-            desiredPosition = target.position + rotatedDirection + Vector3.up * height;
+            // Se colidir, posicionar a câmera um pouco antes do ponto de colisão
+            desiredPosition = hit.point - rayDirection * 0.5f;
         }
 
         Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
