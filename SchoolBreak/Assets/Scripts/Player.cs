@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     public float Speed = 10f;
     public Transform cameraTransform;
     public float Gravity = 10f;
+    public float jumpForce = 3f;
 
     Vector3 MoveDirection;
     CharacterController controller;
@@ -71,6 +72,7 @@ public class Player : MonoBehaviour
         {
             float horizontal = Input.GetAxis("Horizontal");
             float vertical = Input.GetAxis("Vertical");
+            bool jump = Input.GetButtonDown("Jump");
 
             Vector3 move = transform.right * horizontal + transform.forward * vertical;
 
@@ -83,6 +85,11 @@ public class Player : MonoBehaviour
             else
             {
                 anim.SetInteger("transition", 0);
+            }
+            if (jump)
+            {
+                anim.SetInteger("transition", 2);
+                MoveDirection.y = jumpForce;
             }
         }
         else
@@ -109,9 +116,17 @@ public class Player : MonoBehaviour
         //perguntas
         if (other.gameObject.CompareTag("Obstacle"))
         {
+            Questions info = other.GetComponent<Questions>();
+
+            // Se já respondeu corretamente, ignora a pergunta mas mantém o collider
+            if (info != null && info.alreadyAnsweredCorrectly)
+            {
+                return;
+            }
+
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
-            
+
             questionTimer = 25f + extraTimeFromClocks;
             extraTimeFromClocks = 0f; //reseta pq ja foi usado
             questionActive = true;
@@ -132,7 +147,6 @@ public class Player : MonoBehaviour
             isCollidingObstacle = true;
             anim.SetInteger("transition", 0);
 
-            Questions info = other.GetComponent<Questions>();
             if (info != null)
             {
                 var q = info.questionData;
@@ -204,7 +218,15 @@ public class Player : MonoBehaviour
             Debug.Log("Resposta correta!");
             optionButtons[selectedIndex].image.color = Color.green;
             StartCoroutine(CloseQuestion(1f));
-            obstacleCollider.GetComponent<Collider>().enabled = false;
+            // Marca que já foi respondida corretamente
+            if (obstacleCollider != null)
+            {
+                Questions info = obstacleCollider.GetComponent<Questions>();
+                if (info != null)
+                {
+                    info.alreadyAnsweredCorrectly = true;
+                }
+            }
         }
         else
         {

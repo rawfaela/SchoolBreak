@@ -11,4 +11,5 @@ public class QuestionData
 public class Questions : MonoBehaviour
 {
     public QuestionData questionData;
+    public bool alreadyAnsweredCorrectly = false;
 }
