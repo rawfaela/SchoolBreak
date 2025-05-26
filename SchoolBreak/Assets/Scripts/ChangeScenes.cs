@@ -27,4 +27,8 @@ public class ChangeScenes : MonoBehaviour
     {
         SceneManager.LoadScene("Win");
     }
+    public void OnReturnStart()
+    {
+        SceneManager.LoadScene(0);
+    }
 }
