@@ -3722,12 +3722,13 @@ MonoBehaviour:
     - Ela, a Feiticeira
     correctOptionIndex: 1
   alreadyAnsweredCorrectly: 0
-  questionCanvas: {fileID: 0}
-  questionText: {fileID: 0}
-  optionTexts: []
+  questionCanvas: {fileID: 1371947389}
+  questionText: {fileID: 255942714}
+  optionTexts:
+  - {fileID: 255942714}
   optionButtons: []
-  questionTimerText: {fileID: 0}
-  errorsText: {fileID: 0}
+  questionTimerText: {fileID: 1606000}
+  errorsText: {fileID: 1679141984}
   contErrors: 0
 --- !u!65 &470876505
 BoxCollider:
@@ -5236,12 +5237,12 @@ MonoBehaviour:
     - "Substantivo, verbo e preposi\xE7\xE3o"
     correctOptionIndex: 3
   alreadyAnsweredCorrectly: 0
-  questionCanvas: {fileID: 0}
-  questionText: {fileID: 0}
+  questionCanvas: {fileID: 1371947389}
+  questionText: {fileID: 255942714}
   optionTexts: []
   optionButtons: []
-  questionTimerText: {fileID: 0}
-  errorsText: {fileID: 0}
+  questionTimerText: {fileID: 1606000}
+  errorsText: {fileID: 1679141984}
   contErrors: 0
 --- !u!65 &697759046
 BoxCollider:
@@ -6905,12 +6906,12 @@ MonoBehaviour:
     - Fossa das Marianas
     correctOptionIndex: 3
   alreadyAnsweredCorrectly: 0
-  questionCanvas: {fileID: 0}
-  questionText: {fileID: 0}
+  questionCanvas: {fileID: 1371947389}
+  questionText: {fileID: 255942714}
   optionTexts: []
   optionButtons: []
-  questionTimerText: {fileID: 0}
-  errorsText: {fileID: 0}
+  questionTimerText: {fileID: 1606000}
+  errorsText: {fileID: 1679141984}
   contErrors: 0
 --- !u!1001 &1083408175
 PrefabInstance:
@@ -9902,7 +9903,7 @@ MonoBehaviour:
     correctOptionIndex: 2
   alreadyAnsweredCorrectly: 0
   questionCanvas: {fileID: 1371947389}
-  questionText: {fileID: 0}
+  questionText: {fileID: 255942714}
   optionTexts: []
   optionButtons: []
   questionTimerText: {fileID: 1606000}
