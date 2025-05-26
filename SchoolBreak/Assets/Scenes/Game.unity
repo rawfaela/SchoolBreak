@@ -3746,12 +3746,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questionData:
-    question: aaaaaaaaaaaaaaaaaaaaaaaaaaa
+    question: "Qual o livro mais vendido no mundo a seguir \xE0 B\xEDblia?"
     options:
-    - A
-    - B
-    - C
-    - D
+    - "O Senhor dos An\xE9is"
+    - Dom Quixote
+    - "O Pequeno Pr\xEDncipe"
+    - Ela, a Feiticeira
+    - Um Conto de Duas Cidades
     correctOptionIndex: 1
   alreadyAnsweredCorrectly: 0
 --- !u!65 &470876505
@@ -5089,13 +5090,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questionData:
-    question: miau miau miau
+    question: " Qual das alternativas abaixo apenas cont\xEAm classes de palavras?"
     options:
-    - aaa
-    - bbb
-    - ccc
-    - ddd
-    correctOptionIndex: 1
+    - Vogais, semivogais e consoantes
+    - Artigo, verbo transitivo e verbo intransitivo
+    - Fonologia, Morfologia e Sintaxe
+    - Hiatos, ditongos e tritongos
+    - "Substantivo, verbo e preposi\xE7\xE3o"
+    correctOptionIndex: 4
   alreadyAnsweredCorrectly: 0
 --- !u!65 &697759046
 BoxCollider:
@@ -6296,14 +6298,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questionData:
-    question: HAHAHAHA
+    question: "Quais s\xE3o, respectivamente, as capitais da Ucr\xE2nia, Finl\xE2ndia
+      e Pa\xEDses Baixos?"
     options:
-    - A
-    - B
-    - C
-    - D
-    correctOptionIndex: 1
-  alreadyAnsweredCorrectly: 0
+    - "Kiev, Helsinque e Amsterd\xE3"
+    - "Odessa, Turku e Roterd\xE3"
+    - "Kiev, Manila e Roterd\xE3"
+    - "Carc\xF3via, Helsinque e Amsterd\xE3"
+    - "Odessa, Helsinque e Amsterd\xE3"
+    correctOptionIndex: 0
+  alreadyAnsweredCorrectly: 1
 --- !u!65 &954536917
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6802,13 +6806,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questionData:
-    question: AIAIAIAIAAI
+    question: Qual o lugar mais profundo dos oceanos?
     options:
-    - A
-    - B
-    - C
-    - D
-    correctOptionIndex: 1
+    - Fossa de Bentley
+    - Fossa de Tonga
+    - Fossa de Java
+    - Fossa das Ilhas Sandwich
+    - Fossa das Marianas
+    correctOptionIndex: 4
   alreadyAnsweredCorrectly: 0
 --- !u!1001 &1083408175
 PrefabInstance:
@@ -7346,6 +7351,43 @@ PrefabInstance:
     - target: {fileID: 4311482910266148, guid: 86b2edea838afa24796af037de46f29a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814077019769293225, guid: 86b2edea838afa24796af037de46f29a, type: 3}
+      propertyPath: questionData.question
+      value: "Qual o nome do evento astron\xF4mico respons\xE1vel pelo dia mais longo
+        do ano?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814077019769293225, guid: 86b2edea838afa24796af037de46f29a, type: 3}
+      propertyPath: alreadyAnsweredCorrectly
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814077019769293225, guid: 86b2edea838afa24796af037de46f29a, type: 3}
+      propertyPath: questionData.correctOptionIndex
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814077019769293225, guid: 86b2edea838afa24796af037de46f29a, type: 3}
+      propertyPath: questionData.options.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814077019769293225, guid: 86b2edea838afa24796af037de46f29a, type: 3}
+      propertyPath: 'questionData.options.Array.data[0]'
+      value: "Equin\xF3cio de outono"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814077019769293225, guid: 86b2edea838afa24796af037de46f29a, type: 3}
+      propertyPath: 'questionData.options.Array.data[1]'
+      value: "Solst\xEDcio de inverno"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814077019769293225, guid: 86b2edea838afa24796af037de46f29a, type: 3}
+      propertyPath: 'questionData.options.Array.data[2]'
+      value: "Solst\xEDcio de ver\xE3o"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814077019769293225, guid: 86b2edea838afa24796af037de46f29a, type: 3}
+      propertyPath: 'questionData.options.Array.data[3]'
+      value: "Equin\xF3cio de primavera"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814077019769293225, guid: 86b2edea838afa24796af037de46f29a, type: 3}
+      propertyPath: 'questionData.options.Array.data[4]'
+      value: "Solst\xEDcio de outono"
       objectReference: {fileID: 0}
     - target: {fileID: 8403467751401060383, guid: 86b2edea838afa24796af037de46f29a, type: 3}
       propertyPath: m_Enabled
@@ -9448,13 +9490,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questionData:
-    question: KAKAKAK
+    question: "Pamela Rosa, Rayssa Leal e Let\xEDcia Bufoni s\xE3o atletas brasileiras
+      de que modalidade ol\xEDmpica?"
     options:
-    - A
-    - B
-    - C
-    - D
-    correctOptionIndex: 1
+    - Nado Sincronizado
+    - "Gin\xE1stica R\xEDtmica"
+    - "Gin\xE1stica Art\xEDstica"
+    - Atletismo
+    - Skate street
+    correctOptionIndex: 4
   alreadyAnsweredCorrectly: 0
 --- !u!65 &1710655934
 BoxCollider:
@@ -9810,13 +9854,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questionData:
-    question: AIAIAI UIUIUI
+    question: Em que ano os filmes deixaram de ser mudos?
     options:
-    - A
-    - B
-    - C
-    - D
-    correctOptionIndex: 1
+    - 1898
+    - 1895
+    - 1927
+    - 1977
+    - 1827
+    correctOptionIndex: 2
   alreadyAnsweredCorrectly: 0
 --- !u!65 &1809849014
 BoxCollider:
@@ -10519,13 +10564,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questionData:
-    question: GFBZBGE AAAEEEE
+    question: "Em 2018, um evento que aconteceu na Fran\xE7a completou 500 anos.
+      Trata-se de um caso em que v\xE1rias pessoas morreram ap\xF3s passarem dias
+      dan\xE7ando. Qual o nome desse evento?"
     options:
-    - A
-    - B
-    - C
-    - D
-    correctOptionIndex: 1
+    - Peste negra
+    - Gripe francesa
+    - Praga de Estrasburgo
+    - "Esclerose m\xFAltipla"
+    - "Epidemia de dan\xE7a"
+    correctOptionIndex: 4
   alreadyAnsweredCorrectly: 0
 --- !u!65 &1990473755
 BoxCollider:
@@ -10880,13 +10928,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questionData:
-    question: miaaauuuu
+    question: "Qual das alternativas abaixo apenas cont\xEAm classes de palavras?"
     options:
-    - A
-    - B
-    - C
-    - D
-    correctOptionIndex: 1
+    - 'Vogais, semivogais e consoantes '
+    - Artigo, verbo transitivo e verbo intransitivo
+    - Fonologia, Morfologia e Sintaxe
+    - Hiatos, ditongos e tritongos
+    - "Substantivo, verbo e preposi\xE7\xE3o"
+    correctOptionIndex: 4
   alreadyAnsweredCorrectly: 0
 --- !u!65 &2050752175
 BoxCollider:
