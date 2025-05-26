@@ -54,8 +54,13 @@ public class Player : MonoBehaviour
             }
             if (jump)
             {
+                anim.speed = 1.5f;
                 anim.SetInteger("transition", 2);
                 MoveDirection.y = jumpForce;
+            }
+            else
+            {
+                anim.speed = 1.0f;
             }
         }
         else
