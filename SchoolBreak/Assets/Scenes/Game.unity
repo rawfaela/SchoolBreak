@@ -153,7 +153,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: -0.944, y: 0.017, z: 0.329}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 271.5, y: 118.7}
+  m_AnchoredPosition: {x: 274.9, y: 121.6}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1606000
@@ -198,13 +198,13 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
+  m_TextStyleHashCode: 93368250
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -241,7 +241,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0.5779381, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1346,7 +1346,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontColor: {r: 0.9622642, g: 0.9622642, b: 0.9622642, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1367,8 +1367,8 @@ MonoBehaviour:
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 26
-  m_fontSizeMax: 90
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
@@ -3722,7 +3722,6 @@ MonoBehaviour:
     - Ela, a Feiticeira
     correctOptionIndex: 1
   alreadyAnsweredCorrectly: 0
-<<<<<<< HEAD
   questionCanvas: {fileID: 1371947389}
   questionText: {fileID: 255942714}
   optionTexts:
@@ -3730,14 +3729,9 @@ MonoBehaviour:
   - {fileID: 183661947}
   - {fileID: 1192720399}
   - {fileID: 369327658}
-=======
-  questionCanvas: {fileID: 0}
-  questionText: {fileID: 0}
-  optionTexts: []
->>>>>>> 6c52211e3e201e7f9963f67a60cf41ab2febd592
   optionButtons: []
-  questionTimerText: {fileID: 0}
-  errorsText: {fileID: 0}
+  questionTimerText: {fileID: 1606000}
+  errorsText: {fileID: 1679141984}
   contErrors: 0
 --- !u!65 &470876505
 BoxCollider:
@@ -5246,7 +5240,6 @@ MonoBehaviour:
     - "Substantivo, verbo e preposi\xE7\xE3o"
     correctOptionIndex: 3
   alreadyAnsweredCorrectly: 0
-<<<<<<< HEAD
   questionCanvas: {fileID: 1371947389}
   questionText: {fileID: 255942714}
   optionTexts:
@@ -5254,14 +5247,9 @@ MonoBehaviour:
   - {fileID: 183661947}
   - {fileID: 1192720399}
   - {fileID: 369327658}
-=======
-  questionCanvas: {fileID: 0}
-  questionText: {fileID: 0}
-  optionTexts: []
->>>>>>> 6c52211e3e201e7f9963f67a60cf41ab2febd592
   optionButtons: []
-  questionTimerText: {fileID: 0}
-  errorsText: {fileID: 0}
+  questionTimerText: {fileID: 1606000}
+  errorsText: {fileID: 1679141984}
   contErrors: 0
 --- !u!65 &697759046
 BoxCollider:
@@ -6929,7 +6917,6 @@ MonoBehaviour:
     - Fossa das Marianas
     correctOptionIndex: 3
   alreadyAnsweredCorrectly: 0
-<<<<<<< HEAD
   questionCanvas: {fileID: 1371947389}
   questionText: {fileID: 255942714}
   optionTexts:
@@ -6937,14 +6924,9 @@ MonoBehaviour:
   - {fileID: 183661947}
   - {fileID: 1192720399}
   - {fileID: 369327658}
-=======
-  questionCanvas: {fileID: 0}
-  questionText: {fileID: 0}
-  optionTexts: []
->>>>>>> 6c52211e3e201e7f9963f67a60cf41ab2febd592
   optionButtons: []
-  questionTimerText: {fileID: 0}
-  errorsText: {fileID: 0}
+  questionTimerText: {fileID: 1606000}
+  errorsText: {fileID: 1679141984}
   contErrors: 0
 --- !u!1001 &1083408175
 PrefabInstance:
@@ -9937,17 +9919,12 @@ MonoBehaviour:
     correctOptionIndex: 2
   alreadyAnsweredCorrectly: 0
   questionCanvas: {fileID: 1371947389}
-<<<<<<< HEAD
   questionText: {fileID: 255942714}
   optionTexts:
   - {fileID: 1931083776}
   - {fileID: 183661947}
   - {fileID: 1192720399}
   - {fileID: 369327658}
-=======
-  questionText: {fileID: 0}
-  optionTexts: []
->>>>>>> 6c52211e3e201e7f9963f67a60cf41ab2febd592
   optionButtons: []
   questionTimerText: {fileID: 1606000}
   errorsText: {fileID: 1679141984}
