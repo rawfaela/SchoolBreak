@@ -22,6 +22,7 @@ public class Questions : MonoBehaviour
     public Button[] optionButtons;
     public TMP_Text questionTimerText;
     public TMP_Text errorsText;
+    private Color brown = new Color(188f / 255f, 158f / 255f, 145f / 255f);
 
     private int correctAnswerIndex = -1;
     private float questionTimer = 0f;
@@ -133,7 +134,7 @@ public class Questions : MonoBehaviour
     {
         foreach (var btn in optionButtons)
         {
-            btn.image.color = Color.white;
+            btn.image.color = brown;
         }
 
         questionCanvas.gameObject.SetActive(false);
