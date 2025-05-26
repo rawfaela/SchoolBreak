@@ -3,7 +3,7 @@ using UnityEngine;
 public class Camera : MonoBehaviour
 {
     public Transform target;
-    public float distance = 16.0f;
+    public float distance = 15.0f;
     public float height = 16.0f;
     public float rotationSpeed = 5.0f;
     public float smoothSpeed = 0.125f;
@@ -24,7 +24,7 @@ public class Camera : MonoBehaviour
             currentRotation += horizontalInput * rotationSpeed;
         }
 
-        Quaternion rotation = Quaternion.Euler(-30, currentRotation, 0);
+        Quaternion rotation = Quaternion.Euler(-50, currentRotation, 0);
         Vector3 direction = new Vector3(0, 0, -distance);
         Vector3 rotatedDirection = rotation * direction;
         Vector3 desiredPosition = target.position + rotatedDirection + Vector3.up * height;

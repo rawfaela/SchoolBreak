@@ -787,7 +787,7 @@ Transform:
   - {fileID: 919370158}
   - {fileID: 465435168}
   - {fileID: 599631957}
-  - {fileID: 1710655928}
+  - {fileID: 1349872157}
   - {fileID: 1472966847}
   - {fileID: 1677542303}
   m_Father: {fileID: 0}
@@ -6489,7 +6489,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1023275859}
-  distance: 16
+  distance: 15
   height: 16
   rotationSpeed: 5
   smoothSpeed: 0.125
@@ -7900,6 +7900,60 @@ Transform:
   - {fileID: 618236086}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1349872156
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1349872157}
+  - component: {fileID: 1349872158}
+  m_Layer: 0
+  m_Name: bed
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1349872157
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349872156}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1710655928}
+  m_Father: {fileID: 185763031}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1349872158
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349872156}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1357667166 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -297213896666996330, guid: 88819d36025c87c48a98d69e39af0c1c, type: 3}
@@ -9236,7 +9290,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 185763031}
+    m_TransformParent: {fileID: 1349872157}
     m_Modifications:
     - target: {fileID: 100000, guid: 6a43712dffaf88a489a7e4edcd60ff96, type: 3}
       propertyPath: m_Name
@@ -9336,12 +9390,20 @@ MonoBehaviour:
     - Atletismo
     correctOptionIndex: 0
   alreadyAnsweredCorrectly: 0
-  questionCanvas: {fileID: 0}
-  questionText: {fileID: 0}
-  optionTexts: []
-  optionButtons: []
-  questionTimerText: {fileID: 0}
-  errorsText: {fileID: 0}
+  questionCanvas: {fileID: 1371947389}
+  questionText: {fileID: 255942714}
+  optionTexts:
+  - {fileID: 1931083776}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  optionButtons:
+  - {fileID: 272088440}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  questionTimerText: {fileID: 1606000}
+  errorsText: {fileID: 1679141984}
   contErrors: 0
 --- !u!65 &1710655934
 BoxCollider:
