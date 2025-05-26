@@ -1,0 +1,4 @@
+telas
+*você perdeu e você ganhou*
+- colocar voltar ao inicio
+- estilo

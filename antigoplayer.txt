@@ -117,25 +117,16 @@ public class Player : MonoBehaviour
         if (other.gameObject.CompareTag("Obstacle"))
         {
             Questions info = other.GetComponent<Questions>();
-
-            // Se j· respondeu corretamente, ignora a pergunta mas mantÈm o collider
-            if (info != null && info.alreadyAnsweredCorrectly)
+            if (info != null && info.alreadyAnswered)
             {
-                return;
+                return; // j√° respondeu, ignora
             }
-
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
-
+            
             questionTimer = 25f + extraTimeFromClocks;
             extraTimeFromClocks = 0f; //reseta pq ja foi usado
             questionActive = true;
-
-            if (obstacleCollider != null)
-            {
-                obstacleCollider.enabled = true; //ativa o collider do ultimo obstaculo (se tiver)
-            }
-            obstacleCollider = other; //salva o collider desse
 
             if (questionCoroutine != null) //tempo tava contando super rapido quando pegava o relogio
             {
@@ -217,16 +208,9 @@ public class Player : MonoBehaviour
         {
             Debug.Log("Resposta correta!");
             optionButtons[selectedIndex].image.color = Color.green;
+            Questions info = obstacleCollider.GetComponent<Questions>();
+            info.alreadyAnswered = true;
             StartCoroutine(CloseQuestion(1f));
-            // Marca que j· foi respondida corretamente
-            if (obstacleCollider != null)
-            {
-                Questions info = obstacleCollider.GetComponent<Questions>();
-                if (info != null)
-                {
-                    info.alreadyAnsweredCorrectly = true;
-                }
-            }
         }
         else
         {
@@ -234,7 +218,7 @@ public class Player : MonoBehaviour
             optionButtons[selectedIndex].image.color = Color.red;
             StartCoroutine(CloseQuestion(1f));
             ErrorsText.text = $"{ErrorsText.text}X";
-            contErrors += 1;  //QUANDO CHEGAR A 3 VOLTAR DETEN«√O
+            contErrors += 1;  //QUANDO CHEGAR A 3 VOLTAR DETEN√á√ÉO
         }
     }
 
@@ -242,7 +226,7 @@ public class Player : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
 
-        //reseta a cor dos botıes
+        //reseta a cor dos bot√µes
         foreach (var btn in optionButtons)
         {
             btn.image.color = Color.white;

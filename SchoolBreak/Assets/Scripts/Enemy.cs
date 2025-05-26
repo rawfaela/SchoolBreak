@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -13,6 +14,8 @@ public class Enemy : MonoBehaviour
 
     //perguntas
     public Player playerScript;
+
+    public ChangeScenes changeScenes;
 
     void Start()
     {
@@ -68,5 +71,11 @@ public class Enemy : MonoBehaviour
     {
         isAttacking = true;
         anim.SetInteger("transition", 2);
+        StartCoroutine(WaitAnimation());
+    }
+    IEnumerator WaitAnimation()
+    {
+        yield return new WaitForSeconds(1.5f); //espera a animação
+        changeScenes.SceneGameOver();
     }
 }
