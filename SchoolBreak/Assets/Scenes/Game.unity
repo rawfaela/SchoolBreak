@@ -858,6 +858,7 @@ Transform:
   - {fileID: 245534818}
   - {fileID: 1083408176}
   - {fileID: 301594519}
+  - {fileID: 919370158}
   - {fileID: 465435168}
   - {fileID: 599631957}
   - {fileID: 1710655928}
@@ -3752,7 +3753,6 @@ MonoBehaviour:
     - Dom Quixote
     - "O Pequeno Pr\xEDncipe"
     - Ela, a Feiticeira
-    - Um Conto de Duas Cidades
     correctOptionIndex: 1
   alreadyAnsweredCorrectly: 0
 --- !u!65 &470876505
@@ -5095,9 +5095,8 @@ MonoBehaviour:
     - Vogais, semivogais e consoantes
     - Artigo, verbo transitivo e verbo intransitivo
     - Fonologia, Morfologia e Sintaxe
-    - Hiatos, ditongos e tritongos
     - "Substantivo, verbo e preposi\xE7\xE3o"
-    correctOptionIndex: 4
+    correctOptionIndex: 3
   alreadyAnsweredCorrectly: 0
 --- !u!65 &697759046
 BoxCollider:
@@ -6033,6 +6032,137 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 424a86d2d88568c4ab89acd3b8aadfdc, type: 3}
   m_PrefabInstance: {fileID: 1370307251}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &919370157
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 185763031}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 2535a716085ad7f449558a38be0fc7b9, type: 3}
+      propertyPath: m_Name
+      value: table (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 2535a716085ad7f449558a38be0fc7b9, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2535a716085ad7f449558a38be0fc7b9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2535a716085ad7f449558a38be0fc7b9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2535a716085ad7f449558a38be0fc7b9, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2535a716085ad7f449558a38be0fc7b9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 474.264
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2535a716085ad7f449558a38be0fc7b9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 12.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2535a716085ad7f449558a38be0fc7b9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 380.251
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2535a716085ad7f449558a38be0fc7b9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2535a716085ad7f449558a38be0fc7b9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2535a716085ad7f449558a38be0fc7b9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2535a716085ad7f449558a38be0fc7b9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2535a716085ad7f449558a38be0fc7b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2535a716085ad7f449558a38be0fc7b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2535a716085ad7f449558a38be0fc7b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 2535a716085ad7f449558a38be0fc7b9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 919370161}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 2535a716085ad7f449558a38be0fc7b9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 919370160}
+  m_SourcePrefab: {fileID: 100100000, guid: 2535a716085ad7f449558a38be0fc7b9, type: 3}
+--- !u!4 &919370158 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 2535a716085ad7f449558a38be0fc7b9, type: 3}
+  m_PrefabInstance: {fileID: 919370157}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &919370159 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 2535a716085ad7f449558a38be0fc7b9, type: 3}
+  m_PrefabInstance: {fileID: 919370157}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &919370160
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919370159}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.93778, y: 1.3868084, z: 0.7950906}
+  m_Center: {x: -0.000000029802322, y: 0, z: 0.3975583}
+--- !u!114 &919370161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919370159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4e3d354705f7e24c9468e365c603518, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questionData:
+    question: "Qual o livro mais vendido no mundo a seguir \xE0 B\xEDblia?"
+    options:
+    - "O Senhor dos An\xE9is"
+    - Dom Quixote
+    - "O Pequeno Pr\xEDncipe"
+    - Ela, a Feiticeira
+    correctOptionIndex: 1
+  alreadyAnsweredCorrectly: 0
 --- !u!1 &939472708 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -6934769708171945474, guid: 88819d36025c87c48a98d69e39af0c1c, type: 3}
@@ -6304,7 +6434,6 @@ MonoBehaviour:
     - "Kiev, Helsinque e Amsterd\xE3"
     - "Odessa, Turku e Roterd\xE3"
     - "Kiev, Manila e Roterd\xE3"
-    - "Carc\xF3via, Helsinque e Amsterd\xE3"
     - "Odessa, Helsinque e Amsterd\xE3"
     correctOptionIndex: 0
   alreadyAnsweredCorrectly: 1
@@ -6811,9 +6940,8 @@ MonoBehaviour:
     - Fossa de Bentley
     - Fossa de Tonga
     - Fossa de Java
-    - Fossa das Ilhas Sandwich
     - Fossa das Marianas
-    correctOptionIndex: 4
+    correctOptionIndex: 3
   alreadyAnsweredCorrectly: 0
 --- !u!1001 &1083408175
 PrefabInstance:
@@ -7367,7 +7495,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4814077019769293225, guid: 86b2edea838afa24796af037de46f29a, type: 3}
       propertyPath: questionData.options.Array.size
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4814077019769293225, guid: 86b2edea838afa24796af037de46f29a, type: 3}
       propertyPath: 'questionData.options.Array.data[0]'
@@ -9493,12 +9621,11 @@ MonoBehaviour:
     question: "Pamela Rosa, Rayssa Leal e Let\xEDcia Bufoni s\xE3o atletas brasileiras
       de que modalidade ol\xEDmpica?"
     options:
-    - Nado Sincronizado
+    - Skate street
     - "Gin\xE1stica R\xEDtmica"
     - "Gin\xE1stica Art\xEDstica"
     - Atletismo
-    - Skate street
-    correctOptionIndex: 4
+    correctOptionIndex: 0
   alreadyAnsweredCorrectly: 0
 --- !u!65 &1710655934
 BoxCollider:
@@ -9859,7 +9986,6 @@ MonoBehaviour:
     - 1898
     - 1895
     - 1927
-    - 1977
     - 1827
     correctOptionIndex: 2
   alreadyAnsweredCorrectly: 0
@@ -10571,9 +10697,8 @@ MonoBehaviour:
     - Peste negra
     - Gripe francesa
     - Praga de Estrasburgo
-    - "Esclerose m\xFAltipla"
     - "Epidemia de dan\xE7a"
-    correctOptionIndex: 4
+    correctOptionIndex: 3
   alreadyAnsweredCorrectly: 0
 --- !u!65 &1990473755
 BoxCollider:
@@ -10928,14 +11053,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questionData:
-    question: "Qual das alternativas abaixo apenas cont\xEAm classes de palavras?"
+    question: "Little Boy e Fat Man s\xE3o os nomes de:"
     options:
-    - 'Vogais, semivogais e consoantes '
-    - Artigo, verbo transitivo e verbo intransitivo
-    - Fonologia, Morfologia e Sintaxe
-    - Hiatos, ditongos e tritongos
-    - "Substantivo, verbo e preposi\xE7\xE3o"
-    correctOptionIndex: 4
+    - "Bombas at\xF4micas lan\xE7adas, respectivamente, sobre Hiroshima e Nagasaki "
+    - "Bandas de rock da d\xE9cada de 50"
+    - "Super-her\xF3is"
+    - Aeronaves de combate usadas na Segunda Guerra Mundial
+    correctOptionIndex: 0
   alreadyAnsweredCorrectly: 0
 --- !u!65 &2050752175
 BoxCollider:
