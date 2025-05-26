@@ -6590,7 +6590,7 @@ MonoBehaviour:
   Speed: 10
   cameraTransform: {fileID: 963194228}
   Gravity: 10
-  jumpForce: 3
+  jumpForce: 6
   isCollidingObstacle: 0
   changeScenes: {fileID: 711031049}
 --- !u!143 &1023275858
