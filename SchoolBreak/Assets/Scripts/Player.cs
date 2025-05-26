@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
     public float Speed = 10f;
     public Transform cameraTransform;
     public float Gravity = 10f;
-    public float jumpForce = 3f;
+    public float jumpForce = 6f;
 
     private Vector3 MoveDirection;
     private CharacterController controller;
@@ -32,17 +32,26 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void Move()
+    void Move()
     {
         if (controller.isGrounded)
         {
             float horizontal = Input.GetAxis("Horizontal");
             float vertical = Input.GetAxis("Vertical");
             bool jump = Input.GetButtonDown("Jump");
+
             Vector3 move = transform.right * horizontal + transform.forward * vertical;
+
             MoveDirection = move * Speed;
 
-            anim.SetInteger("transition", (vertical != 0 || horizontal != 0) ? 1 : 0);
+            if (vertical != 0 || horizontal != 0)
+            {
+                anim.SetInteger("transition", 1);
+            }
+            else
+            {
+                anim.SetInteger("transition", 0);
+            }
             if (jump)
             {
                 anim.SetInteger("transition", 2);
@@ -56,8 +65,7 @@ public class Player : MonoBehaviour
 
         controller.Move(MoveDirection * Time.deltaTime);
     }
-
-    private void Rotate()
+    void Rotate()
     {
         Vector3 lookDirection = cameraTransform.forward;
         lookDirection.y = 0f;
@@ -66,8 +74,9 @@ public class Player : MonoBehaviour
         {
             Quaternion targetRotation = Quaternion.LookRotation(lookDirection);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 10f * Time.deltaTime);
-        }
+        };
     }
+
 
     private void OnTriggerEnter(Collider other)
     {
