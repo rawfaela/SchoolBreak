@@ -3725,7 +3725,10 @@ MonoBehaviour:
   questionCanvas: {fileID: 1371947389}
   questionText: {fileID: 255942714}
   optionTexts:
-  - {fileID: 255942714}
+  - {fileID: 1931083776}
+  - {fileID: 183661947}
+  - {fileID: 1192720399}
+  - {fileID: 369327658}
   optionButtons: []
   questionTimerText: {fileID: 1606000}
   errorsText: {fileID: 1679141984}
@@ -5239,7 +5242,11 @@ MonoBehaviour:
   alreadyAnsweredCorrectly: 0
   questionCanvas: {fileID: 1371947389}
   questionText: {fileID: 255942714}
-  optionTexts: []
+  optionTexts:
+  - {fileID: 1931083776}
+  - {fileID: 183661947}
+  - {fileID: 1192720399}
+  - {fileID: 369327658}
   optionButtons: []
   questionTimerText: {fileID: 1606000}
   errorsText: {fileID: 1679141984}
@@ -6410,7 +6417,11 @@ MonoBehaviour:
   alreadyAnsweredCorrectly: 1
   questionCanvas: {fileID: 1371947389}
   questionText: {fileID: 255942714}
-  optionTexts: []
+  optionTexts:
+  - {fileID: 1931083776}
+  - {fileID: 183661947}
+  - {fileID: 1192720399}
+  - {fileID: 369327658}
   optionButtons: []
   questionTimerText: {fileID: 1606000}
   errorsText: {fileID: 1679141984}
@@ -6908,7 +6919,11 @@ MonoBehaviour:
   alreadyAnsweredCorrectly: 0
   questionCanvas: {fileID: 1371947389}
   questionText: {fileID: 255942714}
-  optionTexts: []
+  optionTexts:
+  - {fileID: 1931083776}
+  - {fileID: 183661947}
+  - {fileID: 1192720399}
+  - {fileID: 369327658}
   optionButtons: []
   questionTimerText: {fileID: 1606000}
   errorsText: {fileID: 1679141984}
@@ -9402,6 +9417,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 839313529}
+  - {fileID: 2045168249}
   m_Father: {fileID: 185763031}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1706964081
@@ -9562,9 +9578,9 @@ MonoBehaviour:
   questionText: {fileID: 255942714}
   optionTexts:
   - {fileID: 1931083776}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 183661947}
+  - {fileID: 1192720399}
+  - {fileID: 369327658}
   optionButtons:
   - {fileID: 272088440}
   - {fileID: 0}
@@ -9904,7 +9920,11 @@ MonoBehaviour:
   alreadyAnsweredCorrectly: 0
   questionCanvas: {fileID: 1371947389}
   questionText: {fileID: 255942714}
-  optionTexts: []
+  optionTexts:
+  - {fileID: 1931083776}
+  - {fileID: 183661947}
+  - {fileID: 1192720399}
+  - {fileID: 369327658}
   optionButtons: []
   questionTimerText: {fileID: 1606000}
   errorsText: {fileID: 1679141984}
@@ -10704,7 +10724,11 @@ MonoBehaviour:
   alreadyAnsweredCorrectly: 0
   questionCanvas: {fileID: 1371947389}
   questionText: {fileID: 255942714}
-  optionTexts: []
+  optionTexts:
+  - {fileID: 1931083776}
+  - {fileID: 183661947}
+  - {fileID: 1192720399}
+  - {fileID: 369327658}
   optionButtons: []
   questionTimerText: {fileID: 1606000}
   errorsText: {fileID: 1679141984}
@@ -10917,6 +10941,149 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.36147627, y: 1.1797681, z: 1.8459431}
   m_Center: {x: 0.00000007221001, y: 0.00000027012348, z: 0.922984}
+--- !u!1001 &2045168248
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1706964080}
+    m_Modifications:
+    - target: {fileID: 1396718442724188, guid: 49bd04efa032c7d4c8bdc9a4a3e565ce, type: 3}
+      propertyPath: m_Name
+      value: table (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1396718442724188, guid: 49bd04efa032c7d4c8bdc9a4a3e565ce, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241979589122758, guid: 49bd04efa032c7d4c8bdc9a4a3e565ce, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241979589122758, guid: 49bd04efa032c7d4c8bdc9a4a3e565ce, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241979589122758, guid: 49bd04efa032c7d4c8bdc9a4a3e565ce, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.4999996
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241979589122758, guid: 49bd04efa032c7d4c8bdc9a4a3e565ce, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 489.249
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241979589122758, guid: 49bd04efa032c7d4c8bdc9a4a3e565ce, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.943
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241979589122758, guid: 49bd04efa032c7d4c8bdc9a4a3e565ce, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 347.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241979589122758, guid: 49bd04efa032c7d4c8bdc9a4a3e565ce, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241979589122758, guid: 49bd04efa032c7d4c8bdc9a4a3e565ce, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241979589122758, guid: 49bd04efa032c7d4c8bdc9a4a3e565ce, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241979589122758, guid: 49bd04efa032c7d4c8bdc9a4a3e565ce, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241979589122758, guid: 49bd04efa032c7d4c8bdc9a4a3e565ce, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241979589122758, guid: 49bd04efa032c7d4c8bdc9a4a3e565ce, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241979589122758, guid: 49bd04efa032c7d4c8bdc9a4a3e565ce, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1396718442724188, guid: 49bd04efa032c7d4c8bdc9a4a3e565ce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2045168252}
+    - targetCorrespondingSourceObject: {fileID: 1396718442724188, guid: 49bd04efa032c7d4c8bdc9a4a3e565ce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2045168251}
+  m_SourcePrefab: {fileID: 100100000, guid: 49bd04efa032c7d4c8bdc9a4a3e565ce, type: 3}
+--- !u!4 &2045168249 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4241979589122758, guid: 49bd04efa032c7d4c8bdc9a4a3e565ce, type: 3}
+  m_PrefabInstance: {fileID: 2045168248}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2045168250 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1396718442724188, guid: 49bd04efa032c7d4c8bdc9a4a3e565ce, type: 3}
+  m_PrefabInstance: {fileID: 2045168248}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &2045168251
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045168250}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.93778, y: 1.3868088, z: 0.79509073}
+  m_Center: {x: -0.000000029802322, y: 0, z: 0.39755836}
+--- !u!114 &2045168252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045168250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4e3d354705f7e24c9468e365c603518, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questionData:
+    question: "Quais s\xE3o, respectivamente, as capitais da Ucr\xE2nia, Finl\xE2ndia
+      e Pa\xEDses Baixos?"
+    options:
+    - "Kiev, Helsinque e Amsterd\xE3"
+    - "Odessa, Turku e Roterd\xE3"
+    - "Kiev, Manila e Roterd\xE3"
+    - "Odessa, Helsinque e Amsterd\xE3"
+    correctOptionIndex: 0
+  alreadyAnsweredCorrectly: 1
+  questionCanvas: {fileID: 1371947389}
+  questionText: {fileID: 255942714}
+  optionTexts:
+  - {fileID: 1931083776}
+  - {fileID: 183661947}
+  - {fileID: 1192720399}
+  - {fileID: 369327658}
+  optionButtons: []
+  questionTimerText: {fileID: 1606000}
+  errorsText: {fileID: 1679141984}
+  contErrors: 0
 --- !u!1001 &2050752168
 PrefabInstance:
   m_ObjectHideFlags: 0
