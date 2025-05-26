@@ -9619,13 +9619,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questionData:
-    question: Em que ano os filmes deixaram de ser mudos?
+    question: "Quantos graus s\xE3o necess\xE1rios para que dois \xE2ngulos sejam
+      complementares?"
     options:
-    - 1898
-    - 1895
-    - 1927
-    - 1827
-    correctOptionIndex: 2
+    - 45
+    - 90
+    - 180
+    - 360
+    correctOptionIndex: 1
   alreadyAnsweredCorrectly: 0
   questionCanvas: {fileID: 0}
   questionText: {fileID: 0}
