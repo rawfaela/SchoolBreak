@@ -94,8 +94,7 @@ public class Player : MonoBehaviour
         if (other.CompareTag("Clock"))
         {
             Questions question = other.GetComponent<Questions>();
-            if (question != null)
-                question.AddExtraTime(5f);
+            question.AddExtraTime(5f);
         }
 
         if (other.CompareTag("Boost"))

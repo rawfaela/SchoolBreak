@@ -31,11 +31,14 @@ public class Questions : MonoBehaviour
     private Coroutine questionCoroutine;
     private Player playerRef;
 
+    public GameObject blockingObstacle;
+
     public int contErrors = 0;
 
     private void Start()
     {
         questionCanvas.gameObject.SetActive(false);
+        blockingObstacle.SetActive(true);
     }
 
     public void ShowQuestion(Player player)
@@ -108,6 +111,7 @@ public class Questions : MonoBehaviour
         {
             optionButtons[index].image.color = Color.green;
             alreadyAnsweredCorrectly = true;
+            blockingObstacle.SetActive(false);
         }
         else
         {
@@ -141,11 +145,8 @@ public class Questions : MonoBehaviour
         questionTimerText.text = "";
         questionActive = false;
 
-        if (playerRef != null)
-        {
-            playerRef.isCollidingObstacle = false;
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-        }
+        playerRef.isCollidingObstacle = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 }
