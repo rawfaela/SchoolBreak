@@ -4023,7 +4023,6 @@ MonoBehaviour:
   questionTimerText: {fileID: 1606000}
   errorsText: {fileID: 1679141984}
   blockingObstacle: {fileID: 265154225}
-  contErrors: 0
 --- !u!65 &470876505
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4563,15 +4562,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ca93d6fe734504d41bf3785a6ebfc83b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 483.32
+      value: 524.85
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ca93d6fe734504d41bf3785a6ebfc83b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.395
+      value: 13.17
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ca93d6fe734504d41bf3785a6ebfc83b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 432.41
+      value: 371.35
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ca93d6fe734504d41bf3785a6ebfc83b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5318,19 +5317,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fcf4914cd16ae834ebc20fbfd640cf48, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 486.59
+      value: 532.21063
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fcf4914cd16ae834ebc20fbfd640cf48, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.943
+      value: 13.04
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fcf4914cd16ae834ebc20fbfd640cf48, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 346.641
+      value: 390.29013
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fcf4914cd16ae834ebc20fbfd640cf48, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.61208344
+      value: 0.7293909
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fcf4914cd16ae834ebc20fbfd640cf48, type: 3}
       propertyPath: m_LocalRotation.x
@@ -5338,7 +5337,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fcf4914cd16ae834ebc20fbfd640cf48, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.79079324
+      value: -0.6840972
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fcf4914cd16ae834ebc20fbfd640cf48, type: 3}
       propertyPath: m_LocalRotation.z
@@ -5350,7 +5349,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fcf4914cd16ae834ebc20fbfd640cf48, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -104.519
+      value: -86.329
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fcf4914cd16ae834ebc20fbfd640cf48, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -5602,7 +5601,6 @@ MonoBehaviour:
   questionTimerText: {fileID: 1606000}
   errorsText: {fileID: 1679141984}
   blockingObstacle: {fileID: 518907773}
-  contErrors: 0
 --- !u!65 &697759046
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6950,6 +6948,7 @@ MonoBehaviour:
   jumpForce: 6
   isCollidingObstacle: 0
   changeScenes: {fileID: 711031049}
+  contErrors: 0
 --- !u!143 &1023275858
 CharacterController:
   m_ObjectHideFlags: 0
@@ -7273,7 +7272,6 @@ MonoBehaviour:
   questionTimerText: {fileID: 1606000}
   errorsText: {fileID: 1679141984}
   blockingObstacle: {fileID: 450583445}
-  contErrors: 0
 --- !u!65 &1081761178
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10150,7 +10148,6 @@ MonoBehaviour:
   questionTimerText: {fileID: 1606000}
   errorsText: {fileID: 1679141984}
   blockingObstacle: {fileID: 1794100551}
-  contErrors: 0
 --- !u!65 &1710655934
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10548,7 +10545,6 @@ MonoBehaviour:
   questionTimerText: {fileID: 1606000}
   errorsText: {fileID: 1679141984}
   blockingObstacle: {fileID: 1125791713}
-  contErrors: 0
 --- !u!65 &1809849014
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11357,7 +11353,6 @@ MonoBehaviour:
   questionTimerText: {fileID: 1606000}
   errorsText: {fileID: 1679141984}
   blockingObstacle: {fileID: 1315502007}
-  contErrors: 0
 --- !u!65 &1990473755
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11713,7 +11708,6 @@ MonoBehaviour:
   questionTimerText: {fileID: 1606000}
   errorsText: {fileID: 1679141984}
   blockingObstacle: {fileID: 89481929}
-  contErrors: 0
 --- !u!1001 &2050752168
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11834,7 +11828,6 @@ MonoBehaviour:
   questionTimerText: {fileID: 1606000}
   errorsText: {fileID: 1679141984}
   blockingObstacle: {fileID: 1036337465}
-  contErrors: 0
 --- !u!65 &2050752175
 BoxCollider:
   m_ObjectHideFlags: 0
