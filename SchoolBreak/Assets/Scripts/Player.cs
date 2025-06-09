@@ -103,8 +103,12 @@ public class Player : MonoBehaviour
         {
             StartCoroutine(BoostSpeed(2.5f, 5));
         }
-    }
 
+        if (other.gameObject.name == "Win")
+        {
+            changeScenes.SceneWin();
+        }
+    }
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Obstacle"))
