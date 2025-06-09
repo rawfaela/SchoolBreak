@@ -33,8 +33,6 @@ public class Questions : MonoBehaviour
 
     public GameObject blockingObstacle;
 
-    public int contErrors = 0;
-
     private void Start()
     {
         questionCanvas.gameObject.SetActive(false);
@@ -94,11 +92,11 @@ public class Questions : MonoBehaviour
 
         if (questionActive)
         {
-            contErrors++;
+            playerRef.contErrors++;
             errorsText.text += "X";
 
             CloseQuestion();
-            if (contErrors == 3)
+            if (playerRef.contErrors == 3)
             {
                 playerRef.changeScenes.SceneGameOver();
             }
@@ -116,10 +114,10 @@ public class Questions : MonoBehaviour
         else
         {
             optionButtons[index].image.color = Color.red;
-            contErrors++;
+            playerRef.contErrors++;
             errorsText.text += "X";
 
-            if (contErrors == 3)
+            if (playerRef.contErrors == 3)
             {
                 playerRef.changeScenes.SceneGameOver();
             }
