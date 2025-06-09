@@ -5318,15 +5318,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fcf4914cd16ae834ebc20fbfd640cf48, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 496.92
+      value: 486.59
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fcf4914cd16ae834ebc20fbfd640cf48, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.953
+      value: 4.943
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fcf4914cd16ae834ebc20fbfd640cf48, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 395.12
+      value: 346.641
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fcf4914cd16ae834ebc20fbfd640cf48, type: 3}
       propertyPath: m_LocalRotation.w
@@ -11674,8 +11674,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.4006958, y: 1.3868088, z: 0.9571091}
-  m_Center: {x: -0.100128174, y: 7.7396196e-16, z: 0.4785673}
+  m_Size: {x: 1.1114502, y: 1.3868088, z: 0.9571091}
+  m_Center: {x: 0.0014038086, y: 7.7396196e-16, z: 0.4785673}
 --- !u!114 &2045168252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11697,7 +11697,7 @@ MonoBehaviour:
     - "Kiev, Manila e Roterd\xE3"
     - "Odessa, Helsinque e Amsterd\xE3"
     correctOptionIndex: 0
-  alreadyAnsweredCorrectly: 1
+  alreadyAnsweredCorrectly: 0
   questionCanvas: {fileID: 1371947389}
   questionText: {fileID: 255942714}
   optionTexts:
