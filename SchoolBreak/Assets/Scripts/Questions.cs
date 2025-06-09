@@ -55,14 +55,15 @@ public class Questions : MonoBehaviour
 
         questionCanvas.gameObject.SetActive(true);
 
-        questionTimer = 25f + extraTime;
-        extraTime = 0f;
-        questionActive = true;
-
         if (questionCoroutine != null)
             StopCoroutine(questionCoroutine);
 
+        questionTimer = 25f;
+        questionTimer += extraTime; 
+        extraTime = 0f;
+
         questionCoroutine = StartCoroutine(QuestionTimer());
+        questionActive = true;
 
         questionText.text = questionData.question;
         correctAnswerIndex = questionData.correctOptionIndex;
@@ -146,5 +147,11 @@ public class Questions : MonoBehaviour
         playerRef.isCollidingObstacle = false;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        if (questionCoroutine != null)
+        {
+            StopCoroutine(questionCoroutine);
+            questionCoroutine = null;
+        }
     }
 }
