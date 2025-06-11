@@ -33,8 +33,6 @@ public class Questions : MonoBehaviour
 
     public GameObject blockingObstacle;
 
-    public int contErrors = 0;
-
     private void Start()
     {
         questionCanvas.gameObject.SetActive(false);
@@ -57,14 +55,14 @@ public class Questions : MonoBehaviour
 
         questionCanvas.gameObject.SetActive(true);
 
-        questionTimer = 25f + extraTime;
-        extraTime = 0f;
-        questionActive = true;
-
         if (questionCoroutine != null)
             StopCoroutine(questionCoroutine);
 
+        questionTimer = 25f + player.extraTime;
+        player.extraTime = 0f;
+
         questionCoroutine = StartCoroutine(QuestionTimer());
+        questionActive = true;
 
         questionText.text = questionData.question;
         correctAnswerIndex = questionData.correctOptionIndex;
@@ -78,11 +76,6 @@ public class Questions : MonoBehaviour
         }
     }
 
-    public void AddExtraTime(float time)
-    {
-        extraTime += time;
-    }
-
     private IEnumerator QuestionTimer()
     {
         while (questionTimer > 0f)
@@ -94,11 +87,11 @@ public class Questions : MonoBehaviour
 
         if (questionActive)
         {
-            contErrors++;
+            playerRef.contErrors++;
             errorsText.text += "X";
 
             CloseQuestion();
-            if (contErrors == 3)
+            if (playerRef.contErrors == 3)
             {
                 playerRef.changeScenes.SceneGameOver();
             }
@@ -116,10 +109,10 @@ public class Questions : MonoBehaviour
         else
         {
             optionButtons[index].image.color = Color.red;
-            contErrors++;
+            playerRef.contErrors++;
             errorsText.text += "X";
 
-            if (contErrors == 3)
+            if (playerRef.contErrors == 3)
             {
                 playerRef.changeScenes.SceneGameOver();
             }
@@ -148,5 +141,11 @@ public class Questions : MonoBehaviour
         playerRef.isCollidingObstacle = false;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        if (questionCoroutine != null)
+        {
+            StopCoroutine(questionCoroutine);
+            questionCoroutine = null;
+        }
     }
 }

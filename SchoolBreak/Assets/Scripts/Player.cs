@@ -15,6 +15,9 @@ public class Player : MonoBehaviour
     public bool isCollidingObstacle = false;
     public ChangeScenes changeScenes;
 
+    public int contErrors = 0;
+    public float extraTime = 0f;
+
     private void Start()
     {
         controller = GetComponent<CharacterController>();
@@ -70,6 +73,7 @@ public class Player : MonoBehaviour
 
         controller.Move(MoveDirection * Time.deltaTime);
     }
+
     void Rotate()
     {
         Vector3 lookDirection = cameraTransform.forward;
@@ -82,7 +86,6 @@ public class Player : MonoBehaviour
         };
     }
 
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Obstacle"))
@@ -93,17 +96,19 @@ public class Player : MonoBehaviour
 
         if (other.CompareTag("Clock"))
         {
-            Questions question = other.GetComponent<Questions>();
-            question.AddExtraTime(5f);
+            extraTime += 5f;
         }
 
         if (other.CompareTag("Boost"))
         {
             StartCoroutine(BoostSpeed(2.5f, 5));
         }
+
+        if (other.gameObject.name == "Win")
+        {
+            changeScenes.SceneWin();
+        }
     }
-
-
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Obstacle"))
