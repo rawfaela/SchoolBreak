@@ -39,7 +39,7 @@ public class Camera : MonoBehaviour
             desiredPosition = hit.point - rayDirection * 0.5f;
         }
 
-        float currentSmoothSpeed = playerScript.Speed > 10f ? 0.1f : smoothSpeed;
+        float currentSmoothSpeed = playerScript.Speed > 10f ? 0.2f : smoothSpeed;
 
         transform.position = Vector3.SmoothDamp(transform.position, desiredPosition, ref velocity, currentSmoothSpeed);
 
