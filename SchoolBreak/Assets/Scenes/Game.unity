@@ -6295,6 +6295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: {x: 0, y: 100, z: 0}
+  pickupSound: {fileID: 8300000, guid: 258d9461ae90bd342bb983ac8bd40ce7, type: 3}
 --- !u!135 &760834200
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6530,7 +6531,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 744a574c0935f6643ac51b7088358591, type: 3}
   m_Resource: {fileID: 8300000, guid: 744a574c0935f6643ac51b7088358591, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.188
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -6990,6 +6991,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: {x: 0, y: 100, z: 0}
+  pickupSound: {fileID: 8300000, guid: 258d9461ae90bd342bb983ac8bd40ce7, type: 3}
 --- !u!135 &893491667
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -7407,6 +7409,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: {x: 0, y: 100, z: 0}
+  pickupSound: {fileID: 8300000, guid: 258d9461ae90bd342bb983ac8bd40ce7, type: 3}
 --- !u!135 &948287383
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -12304,6 +12307,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: {x: 0, y: 100, z: 0}
+  pickupSound: {fileID: 8300000, guid: 258d9461ae90bd342bb983ac8bd40ce7, type: 3}
 --- !u!135 &1917456355
 SphereCollider:
   m_ObjectHideFlags: 0
