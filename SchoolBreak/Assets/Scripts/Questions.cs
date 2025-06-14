@@ -58,7 +58,7 @@ public class Questions : MonoBehaviour
         if (questionCoroutine != null)
             StopCoroutine(questionCoroutine);
 
-        questionTimer = 25f + player.extraTime;
+        questionTimer = 15f + player.extraTime;
         player.extraTime = 0f;
 
         questionCoroutine = StartCoroutine(QuestionTimer());
