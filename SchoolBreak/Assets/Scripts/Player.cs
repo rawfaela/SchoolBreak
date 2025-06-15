@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     public ChangeScenes changeScenes;
 
     public int contErrors = 0;
+    public float extraTime = 0f;
 
     private void Start()
     {
@@ -95,8 +96,7 @@ public class Player : MonoBehaviour
 
         if (other.CompareTag("Clock"))
         {
-            Questions question = other.GetComponent<Questions>();
-            question.AddExtraTime(5f);
+            extraTime += 5f;
         }
 
         if (other.CompareTag("Boost"))

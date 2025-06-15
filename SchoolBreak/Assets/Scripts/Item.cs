@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-    // Velocidade de rotação (em graus por segundo) nos eixos X, Y e Z
     public Vector3 rotationSpeed = new Vector3(0f, 100f, 0f);
+
+    public AudioClip pickupSound;
 
     void Update()
     {
-        // Rotaciona o objeto com base na velocidade e no tempo entre os frames
         transform.Rotate(rotationSpeed * Time.deltaTime);
     }
 
@@ -15,8 +15,11 @@ public class Item : MonoBehaviour
     {
         if (player.CompareTag("Player"))
         {
-            // Aqui você pode adicionar pontuação, efeitos, som, etc.
-            Destroy(gameObject); // Remove o item da cena
+            if (pickupSound != null)
+            {
+                AudioSource.PlayClipAtPoint(pickupSound, transform.position);
+            }
+            Destroy(gameObject);
         }
     }
 }

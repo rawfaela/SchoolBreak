@@ -64,7 +64,7 @@ public class Enemy : MonoBehaviour
 
     IEnumerator WaitAnimation()
     {
-        yield return new WaitForSeconds(1.5f); // espera a animação
+        yield return new WaitForSeconds(1.5f);
         changeScenes.SceneGameOver();
     }
 }

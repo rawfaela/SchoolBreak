@@ -58,9 +58,8 @@ public class Questions : MonoBehaviour
         if (questionCoroutine != null)
             StopCoroutine(questionCoroutine);
 
-        questionTimer = 25f;
-        questionTimer += extraTime; 
-        extraTime = 0f;
+        questionTimer = 15f + player.extraTime;
+        player.extraTime = 0f;
 
         questionCoroutine = StartCoroutine(QuestionTimer());
         questionActive = true;
@@ -75,11 +74,6 @@ public class Questions : MonoBehaviour
             optionButtons[i].onClick.RemoveAllListeners();
             optionButtons[i].onClick.AddListener(() => OnOptionSelected(index));
         }
-    }
-
-    public void AddExtraTime(float time)
-    {
-        extraTime += time;
     }
 
     private IEnumerator QuestionTimer()

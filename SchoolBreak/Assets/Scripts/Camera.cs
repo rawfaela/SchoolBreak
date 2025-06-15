@@ -9,15 +9,14 @@ public class Camera : MonoBehaviour
     public float smoothSpeed = 0.125f;
 
     private float currentRotation = 0f;
+    private Vector3 velocity = Vector3.zero;
 
     public Player playerScript;
 
     void LateUpdate()
     {
-        // Verificações de segurança
         if (target == null || playerScript == null) return;
 
-        // Rotação da câmera
         if (!playerScript.isCollidingObstacle)
         {
             float horizontalInput = Input.GetAxis("Mouse X");
@@ -29,7 +28,6 @@ public class Camera : MonoBehaviour
         Vector3 rotatedDirection = rotation * direction;
         Vector3 desiredPosition = target.position + rotatedDirection + Vector3.up * height;
 
-        // Detecção de colisão simples - do jogador para a posição desejada da câmera
         Vector3 rayOrigin = target.position + Vector3.up * 1.5f;
         Vector3 rayDirection = (desiredPosition - rayOrigin).normalized;
         float rayDistance = Vector3.Distance(rayOrigin, desiredPosition);
@@ -37,12 +35,12 @@ public class Camera : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(rayOrigin, rayDirection, out hit, rayDistance))
         {
-            // Se colidir, posicionar a câmera um pouco antes do ponto de colisão
             desiredPosition = hit.point - rayDirection * 0.5f;
         }
 
-        Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
-        transform.position = smoothedPosition;
+        float currentSmoothSpeed = playerScript.Speed > 10f ? 0.2f : smoothSpeed;
+
+        transform.position = Vector3.SmoothDamp(transform.position, desiredPosition, ref velocity, currentSmoothSpeed);
 
         transform.LookAt(target.position + Vector3.up * 2f);
     }
