@@ -17,7 +17,6 @@ public class Camera : MonoBehaviour
     {
         if (target == null || playerScript == null) return;
 
-        // Rotação da câmera com o mouse (desativada quando em pergunta)
         if (!playerScript.isCollidingObstacle)
         {
             float horizontalInput = Input.GetAxis("Mouse X");
