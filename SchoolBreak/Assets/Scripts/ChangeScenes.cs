@@ -54,8 +54,4 @@ public class ChangeScenes : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
-    public void OnReturnStart()
-    {
-        SceneManager.LoadScene(0);
-    }
 }
