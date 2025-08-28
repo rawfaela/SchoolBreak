@@ -21,13 +21,12 @@ public class Questions : MonoBehaviour
     public TMP_Text[] optionTexts;
     public Button[] optionButtons;
     public TMP_Text questionTimerText;
-    public TMP_Text errorsText;
+
     private Color brown = new Color(188f / 255f, 158f / 255f, 145f / 255f);
 
     private int correctAnswerIndex = -1;
     private float questionTimer = 0f;
     private bool questionActive = false;
-    private float extraTime = 0f;
     private Coroutine questionCoroutine;
     private Player playerRef;
 
@@ -42,9 +41,7 @@ public class Questions : MonoBehaviour
     public void ShowQuestion(Player player)
     {
         if (alreadyAnsweredCorrectly)
-        {
             return;
-        }
 
         playerRef = player;
         playerRef.isCollidingObstacle = true;
@@ -87,14 +84,8 @@ public class Questions : MonoBehaviour
 
         if (questionActive)
         {
-            playerRef.contErrors++;
-            errorsText.text += "X";
-
+            playerRef.AddError();
             CloseQuestion();
-            if (playerRef.contErrors == 3)
-            {
-                playerRef.changeScenes.SceneGameOver();
-            }
         }
     }
 
@@ -109,13 +100,7 @@ public class Questions : MonoBehaviour
         else
         {
             optionButtons[index].image.color = Color.red;
-            playerRef.contErrors++;
-            errorsText.text += "X";
-
-            if (playerRef.contErrors == 3)
-            {
-                playerRef.changeScenes.SceneGameOver();
-            }
+            playerRef.AddError();
         }
 
         StartCoroutine(CloseQuestionDelayed(1f));
@@ -130,9 +115,7 @@ public class Questions : MonoBehaviour
     private void CloseQuestion()
     {
         foreach (var btn in optionButtons)
-        {
             btn.image.color = brown;
-        }
 
         questionCanvas.gameObject.SetActive(false);
         questionTimerText.text = "";

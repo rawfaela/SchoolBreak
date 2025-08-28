@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class Player : MonoBehaviour
 
     public int contErrors = 0;
     public float extraTime = 0f;
+
+    public Image[] hearts;
 
     private void Start()
     {
@@ -122,5 +125,22 @@ public class Player : MonoBehaviour
         Speed *= multiplier;
         yield return new WaitForSeconds(duration);
         Speed /= multiplier;
+    }
+
+    public void AddError()
+    {
+        contErrors++;
+
+        // Desativa um coração
+        if (contErrors <= hearts.Length)
+        {
+            hearts[contErrors - 1].gameObject.SetActive(false);
+        }
+
+        // Se perdeu todos os corações
+        if (contErrors >= hearts.Length)
+        {
+            changeScenes.SceneGameOver();
+        }
     }
 }
