@@ -7,8 +7,9 @@ public class Player : MonoBehaviour
     public float Speed = 10f;
     public float RunSpeed = 20f; 
     public Transform cameraTransform;
-    public float Gravity = 10f;
-    public float jumpForce = 6f;
+    public float Gravity = 15f;
+    public float jumpForce = 15f;
+    public bool podePular = false;
 
     private Vector3 MoveDirection;
     private CharacterController controller;
@@ -38,6 +39,7 @@ public class Player : MonoBehaviour
         {
             Move();
             Rotate();
+            Jump();
         }
     }
 
@@ -47,7 +49,6 @@ public class Player : MonoBehaviour
         {
             float horizontal = Input.GetAxis("Horizontal");
             float vertical = Input.GetAxis("Vertical");
-            bool jump = Input.GetButtonDown("Jump");
             bool isRunning = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
 
             currentSpeed = isRunning ? RunSpeed : Speed;
@@ -75,12 +76,12 @@ public class Player : MonoBehaviour
                 anim.speed = 1.0f;
             }
 
-            if (jump)
+            /* if (jump)
             {
-                anim.speed = 1.5f;
+                anim.speed = 1f;
                 anim.SetInteger("transition", 2); 
                 MoveDirection.y = jumpForce;
-            }
+            } */
         }
         else
         {
@@ -101,7 +102,17 @@ public class Player : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 8f * Time.deltaTime);
         };
     }
-
+    void Jump()
+    {
+        /* bool jump = Input.GetButton("Jump"); */
+        if(Input.GetKey(KeyCode.Space) && Input.GetKey(KeyCode.W) && !podePular){
+                podePular = true;
+                anim.speed = 2f;
+                anim.SetInteger("transition", 2); 
+                MoveDirection.y = jumpForce;
+                StartCoroutine(PularCD());
+        }
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Obstacle"))
@@ -161,5 +172,9 @@ public class Player : MonoBehaviour
         {
             changeScenes.SceneGameOver();
         }
+    }
+    private IEnumerator PularCD(){
+        yield return new WaitForSeconds(1f);
+        podePular = false;
     }
 }

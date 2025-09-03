@@ -5166,7 +5166,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 620978940}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3f4220219822dea43873809ecebe45bf, type: 3}
   m_Name: 
@@ -7721,6 +7721,8 @@ MonoBehaviour:
   rotationSpeed: 5
   smoothSpeed: 0.125
   playerScript: {fileID: 1023275857}
+  maxHeight: 20
+  ceilingCheckDistance: 5
 --- !u!1 &975274543 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 511083631844673368, guid: 88819d36025c87c48a98d69e39af0c1c, type: 3}
@@ -7815,9 +7817,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 10
+  RunSpeed: 20
   cameraTransform: {fileID: 963194228}
   Gravity: 10
   jumpForce: 6
+  podePular: 0
   isCollidingObstacle: 0
   changeScenes: {fileID: 711031049}
   contErrors: 0
@@ -10631,7 +10635,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 70, y: -70}
+  m_AnchoredPosition: {x: 119.8, y: -85.6}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1564557806
