@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     public float Speed = 10f;
+    public float RunSpeed = 20f; 
     public Transform cameraTransform;
     public float Gravity = 10f;
     public float jumpForce = 6f;
@@ -12,6 +13,7 @@ public class Player : MonoBehaviour
     private Vector3 MoveDirection;
     private CharacterController controller;
     private Animator anim;
+    private float currentSpeed; 
 
     public bool isCollidingObstacle = false;
     public ChangeScenes changeScenes;
@@ -27,6 +29,7 @@ public class Player : MonoBehaviour
         anim = GetComponent<Animator>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        currentSpeed = Speed;
     }
 
     private void Update()
@@ -45,28 +48,38 @@ public class Player : MonoBehaviour
             float horizontal = Input.GetAxis("Horizontal");
             float vertical = Input.GetAxis("Vertical");
             bool jump = Input.GetButtonDown("Jump");
+            bool isRunning = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
+
+            currentSpeed = isRunning ? RunSpeed : Speed;
 
             Vector3 move = transform.right * horizontal + transform.forward * vertical;
 
-            MoveDirection = move * Speed;
+            MoveDirection = move * currentSpeed;
 
             if (vertical != 0 || horizontal != 0)
             {
-                anim.SetInteger("transition", 1);
+                if (isRunning)
+                {
+                    anim.SetInteger("transition", 3); 
+                    anim.speed = 1.5f; 
+                }
+                else
+                {
+                    anim.SetInteger("transition", 1);
+                    anim.speed = 1.0f;
+                }
             }
             else
             {
-                anim.SetInteger("transition", 0);
+                anim.SetInteger("transition", 0); 
+                anim.speed = 1.0f;
             }
+
             if (jump)
             {
                 anim.speed = 1.5f;
-                anim.SetInteger("transition", 2);
+                anim.SetInteger("transition", 2); 
                 MoveDirection.y = jumpForce;
-            }
-            else
-            {
-                anim.speed = 1.0f;
             }
         }
         else
@@ -112,6 +125,7 @@ public class Player : MonoBehaviour
             changeScenes.SceneWin();
         }
     }
+    
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Obstacle"))
@@ -122,22 +136,27 @@ public class Player : MonoBehaviour
 
     private IEnumerator BoostSpeed(float multiplier, float duration)
     {
+        float originalSpeed = Speed;
+        float originalRunSpeed = RunSpeed;
+        
         Speed *= multiplier;
+        RunSpeed *= multiplier;
+        
         yield return new WaitForSeconds(duration);
-        Speed /= multiplier;
+        
+        Speed = originalSpeed;
+        RunSpeed = originalRunSpeed;
     }
 
     public void AddError()
     {
         contErrors++;
 
-        // Desativa um coração
         if (contErrors <= hearts.Length)
         {
             hearts[contErrors - 1].gameObject.SetActive(false);
         }
 
-        // Se perdeu todos os corações
         if (contErrors >= hearts.Length)
         {
             changeScenes.SceneGameOver();
