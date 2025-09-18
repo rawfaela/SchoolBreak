@@ -153,7 +153,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: -0.944, y: 0.017, z: 0.329}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 274.9, y: 121.6}
+  m_AnchoredPosition: {x: 330.9, y: 150.6}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1606000
@@ -1099,8 +1099,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 150, y: 50}
-  m_SizeDelta: {x: 270, y: 70}
+  m_AnchoredPosition: {x: 200, y: 50}
+  m_SizeDelta: {x: 300, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &214285358
 MonoBehaviour:
@@ -1479,7 +1479,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 120}
-  m_SizeDelta: {x: 500, y: 30}
+  m_SizeDelta: {x: 700, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &255942714
 MonoBehaviour:
@@ -1528,8 +1528,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 22
+  m_fontSizeBase: 22
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1730,8 +1730,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -150, y: 135}
-  m_SizeDelta: {x: 270, y: 70}
+  m_AnchoredPosition: {x: -200, y: 135}
+  m_SizeDelta: {x: 300, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &272088440
 MonoBehaviour:
@@ -9385,7 +9385,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 600, y: 300}
+  m_SizeDelta: {x: 720, y: 360}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1268398394
 MonoBehaviour:
@@ -11116,8 +11116,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -150, y: 50}
-  m_SizeDelta: {x: 270, y: 70}
+  m_AnchoredPosition: {x: -200, y: 50}
+  m_SizeDelta: {x: 300, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1682579956
 MonoBehaviour:
@@ -11892,13 +11892,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questionData:
-    question: Em que ano os filmes deixaram de ser mudos?
+    question: "Selecione a alternativa em que os dois compostos org\xE2nicos apresentam
+      fun\xE7\xF5es org\xE2nicas oxigenadas. "
     options:
-    - 1898
-    - 1895
-    - 1927
-    - 1827
-    correctOptionIndex: 2
+    - "clorof\xF3rmio e metanoato de etila  "
+    - "propanol e \xE1cido propanoico"
+    - eteno e etanodiol
+    - etanamida e benzeno
+    correctOptionIndex: 1
   alreadyAnsweredCorrectly: 0
   questionCanvas: {fileID: 1371947389}
   questionText: {fileID: 255942714}
@@ -12918,15 +12919,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questionData:
-    question: "Em 2018, um evento que aconteceu na Fran\xE7a completou 500 anos.
-      Trata-se de um caso em que v\xE1rias pessoas morreram ap\xF3s passarem dias
-      dan\xE7ando. Qual o nome desse evento?"
+    question: "Voc\xEAs que fazem parte dessa massa / Que passa nos projetos do futuro
+      / \xC9 duro tanto ter que caminhar / E dar muito mais do que receber / \xCA,
+      \xF4, \xF4, vida de gado / Povo marcado / \xCA, povo feliz!   Qual comportamento
+      coletivo \xE9 criticado no trecho da letra da can\xE7\xE3o lan\xE7ada em 1979?"
     options:
-    - Peste negra
-    - Gripe francesa
-    - Praga de Estrasburgo
-    - "Epidemia de dan\xE7a"
-    correctOptionIndex: 3
+    - "Milit\xE2ncia pol\xEDtica."
+    - Passividade social.
+    - Autocontrole moral.
+    - Inconformismo eleitoral.
+    correctOptionIndex: 1
   alreadyAnsweredCorrectly: 0
   questionCanvas: {fileID: 1371947389}
   questionText: {fileID: 255942714}
@@ -13282,13 +13284,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questionData:
-    question: "Quais s\xE3o, respectivamente, as capitais da Ucr\xE2nia, Finl\xE2ndia
-      e Pa\xEDses Baixos?"
+    question: "Resolva a equa\xE7\xE3o 3(2x\u22125)+10=19."
     options:
-    - "Kiev, Helsinque e Amsterd\xE3"
-    - "Odessa, Turku e Roterd\xE3"
-    - "Kiev, Manila e Roterd\xE3"
-    - "Odessa, Helsinque e Amsterd\xE3"
+    - '4,0 '
+    - 8,5
+    - 4,5
+    - ' 3,5'
     correctOptionIndex: 0
   alreadyAnsweredCorrectly: 0
   questionCanvas: {fileID: 1371947389}
@@ -13406,13 +13407,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questionData:
-    question: "Little Boy e Fat Man s\xE3o os nomes de:"
+    question: "Nas angiospermas, al\xE9m da fertiliza\xE7\xE3o da oosfera, existe
+      uma segunda fertiliza\xE7\xE3o que resulta num tecido triploide. Essa segunda
+      fertiliza\xE7\xE3o foi importante evolutivamente, pois viabilizou a forma\xE7\xE3o
+      de um tecido de:"
     options:
-    - "Bombas at\xF4micas lan\xE7adas em Hiroshima e Nagasaki "
-    - "Bandas de rock da d\xE9cada de 50"
-    - "Super-her\xF3is"
-    - Aeronaves de combate usadas na Segunda Guerra Mundial
-    correctOptionIndex: 0
+    - "nutri\xE7\xE3o para o fruto."
+    - "reserva para o embri\xE3o."
+    - revestimento para a semente.
+    - "vasculariza\xE7\xE3o para a planta jovem."
+    correctOptionIndex: 1
   alreadyAnsweredCorrectly: 0
   questionCanvas: {fileID: 1371947389}
   questionText: {fileID: 255942714}
@@ -13565,8 +13569,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 150, y: 135}
-  m_SizeDelta: {x: 270, y: 70}
+  m_AnchoredPosition: {x: 200, y: 135}
+  m_SizeDelta: {x: 300, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2090917664
 MonoBehaviour:
