@@ -1478,7 +1478,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 120}
+  m_AnchoredPosition: {x: 0, y: 140}
   m_SizeDelta: {x: 700, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &255942714
@@ -7721,8 +7721,6 @@ MonoBehaviour:
   rotationSpeed: 5
   smoothSpeed: 0.125
   playerScript: {fileID: 1023275857}
-  maxHeight: 20
-  ceilingCheckDistance: 5
 --- !u!1 &975274543 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 511083631844673368, guid: 88819d36025c87c48a98d69e39af0c1c, type: 3}
@@ -8205,12 +8203,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questionData:
-    question: Qual o lugar mais profundo dos oceanos?
+    question: "Saudado por centenas de militantes de movimentos sociais de quarenta
+      pa\xEDses, o Papa Francisco encerrou no dia 09/07/2015 o 2\xBA Encontro Mundial
+      dos Movimentos Populares, em Santa Cruz de La Sierra, na Bol\xEDvia. Segundo
+      ele, a \u201Cglobaliza\xE7\xE3o da esperan\xE7a, que nasce dos povos e cresce
+      entre os pobres, deve substituir esta globaliza\xE7\xE3o da exclus\xE3o e da
+      indiferen\xE7a\u201D.   No texto h\xE1 uma cr\xEDtica ao seguinte aspecto do
+      mundo globalizado: "
     options:
-    - Fossa de Bentley
-    - Fossa de Tonga
-    - Fossa de Java
-    - Fossa das Marianas
+    - "Liberdade pol\xEDtica."
+    - Mobilidade humana.
+    - Conectividade cultural.
+    - "Disparidade econ\xF4mica"
     correctOptionIndex: 3
   alreadyAnsweredCorrectly: 0
   questionCanvas: {fileID: 1371947389}
