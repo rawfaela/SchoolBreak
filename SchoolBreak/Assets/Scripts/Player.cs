@@ -5,16 +5,14 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     public float Speed = 10f;
-    public float RunSpeed = 20f; 
     public Transform cameraTransform;
-    public float Gravity = 15f;
-    public float jumpForce = 15f;
-    public bool podePular = false;
+    public float Gravity = 10f;
+    public float jumpForce = 6f;
 
     private Vector3 MoveDirection;
     private CharacterController controller;
     private Animator anim;
-    private float currentSpeed; 
+    private bool isBoosted = false;
 
     public bool isCollidingObstacle = false;
     public ChangeScenes changeScenes;
@@ -30,7 +28,6 @@ public class Player : MonoBehaviour
         anim = GetComponent<Animator>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        currentSpeed = Speed;
     }
 
     private void Update()
@@ -39,7 +36,6 @@ public class Player : MonoBehaviour
         {
             Move();
             Rotate();
-            Jump();
         }
     }
 
@@ -49,39 +45,34 @@ public class Player : MonoBehaviour
         {
             float horizontal = Input.GetAxis("Horizontal");
             float vertical = Input.GetAxis("Vertical");
-            bool isRunning = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
-
-            currentSpeed = isRunning ? RunSpeed : Speed;
+            bool jump = Input.GetButtonDown("Jump");
 
             Vector3 move = transform.right * horizontal + transform.forward * vertical;
 
-            MoveDirection = move * currentSpeed;
+            MoveDirection = move * Speed;
 
-            if (vertical != 0 || horizontal != 0)
+            if (jump)
             {
-                if (isRunning)
-                {
-                    anim.SetInteger("transition", 3); 
-                    anim.speed = 1.5f; 
-                }
-                else
-                {
-                    anim.SetInteger("transition", 1);
-                    anim.speed = 1.0f;
-                }
+                anim.speed = 1.5f;
+                anim.SetInteger("transition", 2);
+                MoveDirection.y = jumpForce;
             }
             else
             {
-                anim.SetInteger("transition", 0); 
                 anim.speed = 1.0f;
-            }
 
-            /* if (jump)
-            {
-                anim.speed = 1f;
-                anim.SetInteger("transition", 2); 
-                MoveDirection.y = jumpForce;
-            } */
+                if (vertical != 0 || horizontal != 0)
+                {
+                    if (isBoosted)
+                        anim.SetInteger("transition", 3);
+                    else
+                        anim.SetInteger("transition", 1);
+                }
+                else
+                {
+                    anim.SetInteger("transition", 0);
+                }
+            }
         }
         else
         {
@@ -102,17 +93,7 @@ public class Player : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 8f * Time.deltaTime);
         };
     }
-    void Jump()
-    {
-        /* bool jump = Input.GetButton("Jump"); */
-        if(Input.GetKey(KeyCode.Space) && Input.GetKey(KeyCode.W) && !podePular){
-                podePular = true;
-                anim.speed = 2f;
-                anim.SetInteger("transition", 2); 
-                MoveDirection.y = jumpForce;
-                StartCoroutine(PularCD());
-        }
-    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Obstacle"))
@@ -136,7 +117,6 @@ public class Player : MonoBehaviour
             changeScenes.SceneWin();
         }
     }
-    
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Obstacle"))
@@ -147,16 +127,11 @@ public class Player : MonoBehaviour
 
     private IEnumerator BoostSpeed(float multiplier, float duration)
     {
-        float originalSpeed = Speed;
-        float originalRunSpeed = RunSpeed;
-        
+        isBoosted = true;
         Speed *= multiplier;
-        RunSpeed *= multiplier;
-        
         yield return new WaitForSeconds(duration);
-        
-        Speed = originalSpeed;
-        RunSpeed = originalRunSpeed;
+        Speed /= multiplier;
+        isBoosted = false;
     }
 
     public void AddError()
@@ -172,9 +147,5 @@ public class Player : MonoBehaviour
         {
             changeScenes.SceneGameOver();
         }
-    }
-    private IEnumerator PularCD(){
-        yield return new WaitForSeconds(1f);
-        podePular = false;
     }
 }

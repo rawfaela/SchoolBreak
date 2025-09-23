@@ -5908,7 +5908,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questionData:
-    question: " Qual das alternativas abaixo apenas cont\xEAm classes de palavras?"
+    question: "Qual das alternativas abaixo apenas cont\xEAm classes de palavras?"
     options:
     - Vogais, semivogais e consoantes
     - Artigo, verbo transitivo e verbo intransitivo
@@ -7059,7 +7059,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 424a86d2d88568c4ab89acd3b8aadfdc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.47
+      value: 1.04
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 424a86d2d88568c4ab89acd3b8aadfdc, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7067,7 +7067,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 424a86d2d88568c4ab89acd3b8aadfdc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 28.61
+      value: 25.07
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 424a86d2d88568c4ab89acd3b8aadfdc, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7477,7 +7477,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 424a86d2d88568c4ab89acd3b8aadfdc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 46.56
+      value: 42.07
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 424a86d2d88568c4ab89acd3b8aadfdc, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7485,7 +7485,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 424a86d2d88568c4ab89acd3b8aadfdc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -22.09
+      value: -21.87
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 424a86d2d88568c4ab89acd3b8aadfdc, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7815,11 +7815,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 10
-  RunSpeed: 20
   cameraTransform: {fileID: 963194228}
   Gravity: 10
   jumpForce: 6
-  podePular: 0
   isCollidingObstacle: 0
   changeScenes: {fileID: 711031049}
   contErrors: 0
@@ -8203,18 +8201,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questionData:
-    question: "Saudado por centenas de militantes de movimentos sociais de quarenta
-      pa\xEDses, o Papa Francisco encerrou no dia 09/07/2015 o 2\xBA Encontro Mundial
-      dos Movimentos Populares, em Santa Cruz de La Sierra, na Bol\xEDvia. Segundo
-      ele, a \u201Cglobaliza\xE7\xE3o da esperan\xE7a, que nasce dos povos e cresce
-      entre os pobres, deve substituir esta globaliza\xE7\xE3o da exclus\xE3o e da
-      indiferen\xE7a\u201D.   No texto h\xE1 uma cr\xEDtica ao seguinte aspecto do
-      mundo globalizado: "
+    question: "\xC9 preciso ressaltar que, de todas as capitanias brasileiras, Minas
+      era a mais urbanizada. N\xE3o havia ali hegemonia de um ou dois grandes centros.
+      A regi\xE3o era repleta de vilas e arraiais, grandes e pequenos, em cujas ruas
+      muita gente circulava.   As regi\xF5es da Am\xE9rica portuguesa tiveram distintas
+      l\xF3gicas de ocupa\xE7\xE3o. Uma explica\xE7\xE3o para a especificidade da
+      regi\xE3o descrita no texto est\xE1 identificada na: "
     options:
-    - "Liberdade pol\xEDtica."
-    - Mobilidade humana.
-    - Conectividade cultural.
-    - "Disparidade econ\xF4mica"
+    - "apropria\xE7\xE3o cultural diante das influ\xEAncias externas."
+    - "produ\xE7\xE3o manufatureira diante do exclusivo comercial."
+    - "insubordina\xE7\xE3o religiosa diante da hierarquia eclesi\xE1stica."
+    - "fiscaliza\xE7\xE3o estatal diante das particularidades econ\xF4micas. "
     correctOptionIndex: 3
   alreadyAnsweredCorrectly: 0
   questionCanvas: {fileID: 1371947389}
