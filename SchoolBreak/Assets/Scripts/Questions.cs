@@ -1,4 +1,4 @@
-using System.Collections;
+  using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -55,7 +55,7 @@ public class Questions : MonoBehaviour
         if (questionCoroutine != null)
             StopCoroutine(questionCoroutine);
 
-        questionTimer = 15f + player.extraTime;
+        questionTimer = 20f + player.extraTime;
         player.extraTime = 0f;
 
         questionCoroutine = StartCoroutine(QuestionTimer());
