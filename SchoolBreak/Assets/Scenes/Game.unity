@@ -1478,7 +1478,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 140}
+  m_AnchoredPosition: {x: 0, y: 139}
   m_SizeDelta: {x: 700, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &255942714
@@ -3907,13 +3907,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questionData:
-    question: "Qual o livro mais vendido no mundo a seguir \xE0 B\xEDblia?"
+    question: "O processo de concentra\xE7\xE3o urbana no Brasil em determinados
+      locais teve momentos de maior intensidade e, ao que tudo indica, atualmente
+      passa por uma desacelera\xE7\xE3o no ritmo de crescimento populacional nos
+      grandes centros urbanos. Uma causa para o processo socioespacial mencionado
+      no texto \xE9 o(a): "
     options:
-    - "O Senhor dos An\xE9is"
-    - Dom Quixote
-    - "O Pequeno Pr\xEDncipe"
-    - Ela, a Feiticeira
-    correctOptionIndex: 1
+    - "car\xEAncia de mat\xE9rias-primas."
+    - "degrada\xE7\xE3o da rede rodovi\xE1ria."
+    - "centraliza\xE7\xE3o do poder pol\xEDtico"
+    - "realoca\xE7\xE3o da atividade industrial."
+    correctOptionIndex: 3
   alreadyAnsweredCorrectly: 0
   questionCanvas: {fileID: 1371947389}
   questionText: {fileID: 255942714}
@@ -9184,8 +9188,11 @@ PrefabInstance:
       objectReference: {fileID: 1606000}
     - target: {fileID: 4814077019769293225, guid: 86b2edea838afa24796af037de46f29a, type: 3}
       propertyPath: questionData.question
-      value: "Qual o nome do evento astron\xF4mico respons\xE1vel pelo dia mais longo
-        do ano?"
+      value: "Em linhas gerais, \u201Cempirismo\u201D significa uma posi\xE7\xE3o
+        filos\xF3fica que toma a experi\xEAncia como guia e crit\xE9rio de validade
+        de suas afirma\xE7\xF5es, sobretudo nos campos da teoria do conhecimento
+        e da filosofia da ci\xEAncia. Tendo em vista o trecho, pode-se dizer que
+        uma das caracter\xEDsticas fundamentais do Empirismo \xE9: "
       objectReference: {fileID: 0}
     - target: {fileID: 4814077019769293225, guid: 86b2edea838afa24796af037de46f29a, type: 3}
       propertyPath: optionTexts.Array.size
@@ -9233,7 +9240,7 @@ PrefabInstance:
       objectReference: {fileID: 214285358}
     - target: {fileID: 4814077019769293225, guid: 86b2edea838afa24796af037de46f29a, type: 3}
       propertyPath: questionData.correctOptionIndex
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4814077019769293225, guid: 86b2edea838afa24796af037de46f29a, type: 3}
       propertyPath: questionData.options.Array.size
@@ -9241,19 +9248,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4814077019769293225, guid: 86b2edea838afa24796af037de46f29a, type: 3}
       propertyPath: 'questionData.options.Array.data[0]'
-      value: "Equin\xF3cio de outono"
+      value: "a defesa de que n\xE3o existe conhecimento fora da revela\xE7\xE3o
+        divina."
       objectReference: {fileID: 0}
     - target: {fileID: 4814077019769293225, guid: 86b2edea838afa24796af037de46f29a, type: 3}
       propertyPath: 'questionData.options.Array.data[1]'
-      value: "Solst\xEDcio de inverno"
+      value: "a rejei\xE7\xE3o da cren\xE7a de que as ideias s\xE3o inatas."
       objectReference: {fileID: 0}
     - target: {fileID: 4814077019769293225, guid: 86b2edea838afa24796af037de46f29a, type: 3}
       propertyPath: 'questionData.options.Array.data[2]'
-      value: "Solst\xEDcio de ver\xE3o"
+      value: "a defesa de que o conhecimento antecede a experi\xEAncia."
       objectReference: {fileID: 0}
     - target: {fileID: 4814077019769293225, guid: 86b2edea838afa24796af037de46f29a, type: 3}
       propertyPath: 'questionData.options.Array.data[3]'
-      value: "Equin\xF3cio de primavera"
+      value: "a refuta\xE7\xE3o das teorias aristot\xE9licas sobre a forma\xE7\xE3o
+        do conhecimento."
       objectReference: {fileID: 0}
     - target: {fileID: 4814077019769293225, guid: 86b2edea838afa24796af037de46f29a, type: 3}
       propertyPath: 'questionData.options.Array.data[4]'
@@ -11427,14 +11436,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questionData:
-    question: "Pamela Rosa, Rayssa Leal e Let\xEDcia Bufoni s\xE3o atletas brasileiras
-      de que modalidade ol\xEDmpica?"
+    question: "Entre as transforma\xE7\xF5es termodin\xE2micas abaixo, qual delas
+      tem a varia\xE7\xE3o da energia interna de um g\xE1s nula? "
     options:
-    - Skate street
-    - "Gin\xE1stica R\xEDtmica"
-    - "Gin\xE1stica Art\xEDstica"
-    - Atletismo
-    correctOptionIndex: 0
+    - "Adiab\xE1tica. "
+    - "Isot\xE9rmica."
+    - "Isob\xE1rica. "
+    - "Isovolum\xE9trica."
+    correctOptionIndex: 1
   alreadyAnsweredCorrectly: 0
   questionCanvas: {fileID: 1371947389}
   questionText: {fileID: 255942714}
@@ -12922,7 +12931,7 @@ MonoBehaviour:
   questionData:
     question: "Voc\xEAs que fazem parte dessa massa / Que passa nos projetos do futuro
       / \xC9 duro tanto ter que caminhar / E dar muito mais do que receber / \xCA,
-      \xF4, \xF4, vida de gado / Povo marcado / \xCA, povo feliz!   Qual comportamento
+      \xF4, \xF4, vida de gado / Povo marcado / \xCA, povo feliz! Qual comportamento
       coletivo \xE9 criticado no trecho da letra da can\xE7\xE3o lan\xE7ada em 1979?"
     options:
     - "Milit\xE2ncia pol\xEDtica."
@@ -13285,7 +13294,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questionData:
-    question: "Resolva a equa\xE7\xE3o 3(2x\u22125)+10=19."
+    question: "Resolva a equa\xE7\xE3o 3(2x-5)+10=19."
     options:
     - '4,0 '
     - 8,5
