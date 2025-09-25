@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
+  companyName: SchoolBreak
   productName: SchoolBreak
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -753,15 +753,14 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   captureStartupLogs: {}
   activeInputHandler: 0
-
   windowsGamepadBackendHint: 0
-  cloudProjectId: d7118153-3e69-4a83-923b-0236b168f23f
+  cloudProjectId: 
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: SchoolBreak
-  organizationId: rawfaelaa
+  projectName: 
+  organizationId: 
   cloudEnabled: 0
-  legacyClampBlendShapeWeights: 0
+  legacyClampBlendShapeWeights: 1
   hmiLoadingImage: {fileID: 0}
   platformRequiresReadableAssets: 0
   virtualTexturingSupportEnabled: 0
